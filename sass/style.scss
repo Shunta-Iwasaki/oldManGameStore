@@ -1,11 +1,13 @@
 @import './mixin';
 
 @font-face {
-    font-family: "PixelMplus10-Bold","PixelMplus10-Regular";
-    src :url("font/PixelMplus10-Bold.woff2"),
-        url("font/PixelMplus10-Bold.woff"),
-        url("font/PixelMplus10-Regular.woff2"),
-        url("font/PixelMplus10-Regular.woff"),
+    font-family: 
+        "PixelMplus10-Bold","PixelMplus10-Regular";
+    src :
+        url(font/PixelMplus10-Bold.woff2),
+        url(font/PixelMplus10-Bold.woff),
+        url(font/PixelMplus10-Regular.woff2),
+        url(font/PixelMplus10-Regular.woff),
 }
 body {
     font-family: "PixelMplus10";
