@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>おじいさんのゲームやさん</title>
+        <meta name='description' content="おじいさんのゲームやさんの公式ブログ。">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:url" content="https://shunta-iwasaki.github.io/FairyTale/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="おじいさんのゲームやさん" />
+        <meta property="og:description" content="おじいさんのゲームやさんの公式ブログ。" />
+        <meta property="og:site_name" content="おじいさんのゲームやさん" />
+        <meta property="og:image" content="https://shunta-iwasaki.github.io/fairytale/img/header.jpg" />
+        <link rel="icon" type="image/png" href="https://shunta-iwasaki.github.io/portfolio/img/logo_ita.png">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- ヘッダー -->
+        <header class="page-header">
+            <!-- ヘッダーアニメ(pc) -->
+            <video class="page-header__video-pc" src="img_true/header-anime_pc.mp4" loop autoplay muted>
+            </video>
+            <!-- ヘッダーアニメ(sp) -->
+            <video class="page-header__video-sp" src="img_true/header-anime_sp.mp4" loop autoplay muted>
+            </video>
+        </header>
+        <!-- コンテンツ部分 -->
+        <div class="wrapper main-content">
+            <article class="main-content__article">
+                <!-- ナビ(pc) -->
+                <nav class="main-content__article__nav-pc">
+                    <ul>
+                        <li class="main-content__article__nav-pc__list" onmouseover="mouseover('main-content-nav1');" onmouseout="mouseout('main-content-nav1');">
+                            <p id="main-content-nav1">　</p><a href="index.html"><p>ホーム</p></a>
+                        </li>
+                        <li class="main-content__article__nav-pc__list" onmouseover="mouseover('main-content-nav2');" onmouseout="mouseout('main-content-nav2');">
+                            <p id="main-content-nav2">　</p><a href="topic.html"><p>記事一覧</p></a>
+                        </li>
+                        <li class="main-content__article__nav-pc__list" onmouseover="mouseover('main-content-nav3');" onmouseout="mouseout('main-content-nav3');">
+                            <p id="main-content-nav3">　</p><a href="image.html"><p>画像一覧</p></a>
+                        </li>
+                        <li class="main-content__article__nav-pc__list" onmouseover="mouseover('main-content-nav4');" onmouseout="mouseout('main-content-nav4');">
+                            <p id="main-content-nav4">　</p><a href="shopinfo.html"><p>お店について</p></a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- ナビ(tab) -->
+                <nav class="main-content__article__nav-tab">
+                    <ul>
+                        <li class="main-content__article__nav-tab__list">
+                            <a href="index.html"><p>ホーム</p></a>
+                        </li>
+                        <li class="main-content__article__nav-tab__list">
+                            <a href="topic.html"><p>記事一覧</p></a>
+                        </li>
+                        <li class="main-content__article__nav-tab__list">
+                            <a href="image.html"><p>画像一覧</p></a>
+                        </li>
+                        <li class="main-content__article__nav-tab__list">
+                            <a href="shopinfo.html"><p>お店について</p></a>
+                        </li>
+                        <li class="main-content__article__nav-tab__list">
+                            <a href="list.html?title=人気記事"><p>人気記事</p></a>
+                        </li>
+                        <li class="main-content__article__nav-tab__list">
+                            <a href="list.html?title=最新記事"><p>最新記事</p></a>
+                        </li>
+                        <li class="main-content__article__nav-tab__list">
+                            <a href="category.html?title=カテゴリ"><p>カテゴリ</p></a>
+                        </li>
+                        <li class="main-content__article__nav-tab__list">
+                            <a href="category.html?title=タグ"><p>タグ</p></a>
+                        </li>
+                        <li class="main-content__article__nav-tab__list">
+                            <a href="date.html"><p>年月</p></a>
+                        </li>
+                        <li class="main-content__article__nav-tab__list">
+                            <a href="calendar.html"><p>営業日カレンダー</p></a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- 検索バー -->
+                <div class="main-content__article__search-tab">
+                    <img class="main-content__article__search-tab__frame" src="img_true/frame_tab_search.svg" alt="枠">
+                    <div class="main-content__article__search-tab__input">
+                        <img src="img_true/icon_search.svg" alt="虫眼鏡">
+                        <!-- 画面遷移防止用のダミー入力欄 -->
+                        <input type="text" name="dummy" style="display:none;">
+                        <input id="search-tab" type="text" value="" placeholder="ブログを検索" name="search">
+                    </div>
+                </div>
+                <div class="main-content__article__profile-tab">
+                    <!-- プロフィール画像 -->
+                    <img class="main-content__article__profile-tab__img" src="img_true/logo.jpg" alt="ロゴ">
+                    <p class="main-content__article__profile-tab__name">
+                        おじいさんのゲームやさん
+                    </p>
+                    <p class="main-content__article__profile-tab__text">
+                        1995年開店のゲーム販売店<br>
+                        レトロゲームの販売に力を入れています
+                    </p>
+                    <a class="main-content__article__profile-tab__to-shopinfo" href="shopinfo.html">
+                        <p>
+                            お店の詳細はこちら＞＞
+                        </p>
+                    </a>
+                    <!-- 横線 -->
+                    <p class="aside__line">　</p>
+                </div>
+                <!-- フレーム(PC) -->
+                <img class="main-content__article__image-frame-pc" src="img_true/frame_pc_image.svg">
+                <!-- フレーム(TAB) -->
+                <img class="main-content__article__image-frame-tab" src="img_true/frame_tab_image.svg">
+                <!-- フレーム(SP) -->
+                <img class="main-content__article__image-frame-sp" src="img_true/frame_sp_image.svg">
+                <!-- 記事部分 -->
+                <div class="main-content__article__image-topic">
+                    <div class="main-content__article__image-topic__topic">
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve0" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve1" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve2" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve3" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve4" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve5" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve6" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve7" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve8" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve9" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve10" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve11" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve12" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve13" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve14" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve15" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve16" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve17" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve18" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve19" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve20" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve21" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve22" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve23" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve24" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve25" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve26" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve27" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve28" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                        <!-- アイキャッチ -->
+                        <a class="main-content__article__image-topic__topic__part" href="article.html">
+                            <img class="image-white" src="img_true/white.png" alt="白">
+                            <img id="image-dissolve29" src="img_true/dissolve_dummy.gif" alt="ディゾルブ">
+                            <img class="main-content__article__image-topic__topic__part__img" src="img_true/play_hand.jpg" alt="ゲームコントローラー">
+                        </a>
+                    </div>
+                    <!-- 横線 -->
+                    <p class="article__line">　</p>
+                    <div class="main-content__article__image-topic__page-transition">
+                        <a href="index.html"><p>1</p></a>
+                        <a href="index.html"><p>2</p></a>
+                        <a href="index.html"><p>3</p></a>
+                        <a href="index.html"><p>4</p></a>
+                        <a href="index.html"><p>5</p></a>
+                        <a href="index.html"><img src="img_true/button_next.svg" alt="次へ"></a>
+                    </div>
+                </div>
+            </article>
+            <div class="main-content__aside">
+                <!-- 検索バー -->
+                <div class="main-content__aside__search">
+                    <img class="main-content__aside__search__frame" src="img_true/frame_pc_search.svg" alt="枠">
+                    <div class="main-content__aside__search__input">
+                        <img src="img_true/icon_search.svg" alt="虫眼鏡">
+                        <!-- 画面遷移防止用のダミー入力欄 -->
+                        <input type="text" name="dummy" style="display:none;">
+                        <input id="search" type="text" value="" placeholder="ブログを検索" name="search">
+                    </div>
+                </div>
+                <div class="main-content__aside__profile">
+                    <!-- プロフィール画像 -->
+                    <img class="main-content__aside__profile__img" src="img_true/logo.jpg" alt="ロゴ">
+                    <p class="main-content__aside__profile__name">
+                        おじいさんのゲームやさん
+                    </p>
+                    <p class="main-content__aside__profile__text">
+                        1995年開店のゲーム販売店<br>
+                        レトロゲームの販売に力を入れています
+                    </p>
+                    <a class="main-content__aside__profile__to-shopinfo" href="article.html">
+                        <p>
+                            お店の詳細はこちら＞＞
+                        </p>
+                    </a>
+                    <!-- 横線 -->
+                    <p class="aside__line">　</p>
+                </div>
+                <!-- チャットbot -->
+                <div class="main-content__aside__chatbot">
+                    <div class="main-content__aside__chatbot__info">
+                        <img src="img_true/frame_pc_info.svg" alt="枠">
+                        <p class="flash" id="chatbot-info-pc">おじいさんチャットBOTに質問する</p>
+                    </div>
+                    <img class="main-content__aside__chatbot__img" id="chatbot-img-pc" src="img_true/chatbot_normal.jpg" alt="チャットbot">
+                    <form class="main-content__aside__chatbot__question" id="chatbot-pc">
+                        <img src="img_true/frame_pc_question.svg" alt="枠">
+                        <!-- 画面遷移防止用のダミー入力欄 -->
+                        <input type="text" name="dummy" style="display:none;">
+                        <input type="text" size="35" value="" placeholder="質問を入力しEnter" name="question">
+                    </form>
+                </div>
+                <!-- 人気記事 -->
+                <div class="main-content__aside__popular">
+                    <a href="list.html?title=人気記事">
+                        <p class="main-content__aside__title">人気記事</p>
+                    </a>
+                    <!-- 横線 -->
+                    <p class="aside__line">　</p>
+                    <div class="main-content__aside__popular__topic">
+                        <a href="article.html"><p>今、レトロゲームが熱い！</p></a>
+                        <a href="article.html"><p>ゲーム大会を実施しました。</p></a>
+                        <a href="article.html"><p>おすすめレトロゲーム３選！</p></a>
+                    </div>
+                </div>
+                <!-- 最新記事 -->
+                <div class="main-content__aside__new">
+                    <a href="list.html?title=最新記事">
+                        <p class="main-content__aside__title">最新記事</p>
+                    </a>
+                    <!-- 横線 -->
+                    <p class="aside__line">　</p>
+                    <div class="main-content__aside__new__topic">
+                        <a href="article.html"><p>伝説のゲーム、入荷！</p></a>
+                        <a href="article.html"><p>レトロゲーム、体験できます</p></a>
+                        <a href="article.html"><p>カセット買い取ります！</p></a>
+                        <a href="article.html"><p>あなたはSANY派？NONTENDO派？</p></a>
+                        <a href="article.html"><p>名作シューティングゲームの意外な攻略法！</p></a>
+                    </div>
+                </div>
+                <!-- カテゴリ -->
+                <div class="main-content__aside__category">
+                    <a href="category.html?title=カテゴリ">
+                        <p class="main-content__aside__title">カテゴリ</p>
+                    </a>
+                    <!-- 横線 -->
+                    <p class="aside__line">　</p>
+                    <div class="main-content__aside__category__topic">
+                        <a href="list.html?title=カテゴリ：ソフト"><p>ソフト(10)</p></a>
+                        <a href="list.html?title=カテゴリ：ゲーム体験"><p>ゲーム体験(8)</p></a>
+                        <a href="list.html?title=カテゴリ：レトロゲーム"><p>レトロゲーム(3)</p></a>
+                    </div>
+                </div>
+                <!-- タグ -->
+                <div class="main-content__aside__tag">
+                    <a href="category.html?title=タグ">
+                        <p class="main-content__aside__title">タグ</p>
+                    </a>
+                    <!-- 横線 -->
+                    <p class="aside__line">　</p>
+                    <div class="main-content__aside__tag__topic">
+                        <a href="list.html?title=タグ：ファミリーコンパクト"><p>ファミリーコンパクト(10)</p></a>
+                        <a href="list.html?title=タグ：買取"><p>買取(8)</p></a>
+                        <a href="list.html?title=タグ：MONTENDO"><p>NONTENDO(3)</p></a>
+                        <a href="list.html?title=タグ：体験"><p>体験(7)</p></a>
+                        <a href="list.html?title=タグ：入荷"><p>入荷(3)</p></a>
+                        <a href="list.html?title=タグ：ドット絵"><p>ドット絵(10)</p></a>
+                    </div>
+                </div>
+                <!-- 年月 -->
+                <div class="main-content__aside__date">
+                    <a href="date.html">
+                        <p class="main-content__aside__title">年月</p>
+                    </a>
+                    <!-- 横線 -->
+                    <p class="aside__line">　</p>
+                    <div class="main-content__aside__date__topic">
+                        <button class="main-content__aside__date__topic__button">
+                            <p>2023年</p>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <div class="main-content__aside__date__topic__month">
+                            <a href="list.html?title=2023年 6月"><p>6月(3)</p></a>
+                            <a href="list.html?title=2023年 4月"><p>4月(10)</p></a>
+                            <a href="list.html?title=2023年 3月"><p>3月(5)</p></a>
+                        </div>
+                        <button class="main-content__aside__date__topic__button">
+                            <p>2022年</p>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <div class="main-content__aside__date__topic__month">
+                            <a href="list.html?title=2022年 6月"><p>6月(3)</p></a>
+                            <a href="list.html?title=2022年 4月"><p>4月(10)</p></a>
+                            <a href="list.html?title=2022年 3月"><p>3月(5)</p></a>
+                        </div>
+                        <button class="main-content__aside__date__topic__button">
+                            <p>2021年</p>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <div class="main-content__aside__date__topic__month">
+                            <a href="list.html?title=2021年 6月"><p>6月(3)</p></a>
+                            <a href="list.html?title=2021年 4月"><p>4月(10)</p></a>
+                            <a href="list.html?title=2021年 3月"><p>3月(5)</p></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 営業日カレンダー -->
+                <div class="main-content__aside__calendar">
+                    <a href="calendar.html">
+                        <p class="main-content__aside__title">営業日カレンダー</p>
+                    </a>
+                    <!-- 横線 -->
+                    <p class="aside__line">　</p>
+                    <div class="main-content__aside__calendar__month">
+                        <p>2023年 6月 ></p>
+                    </div>
+                    <div class="main-content__aside__calendar__week">
+                        <p>日　月　火　水　木　金　土</p>
+                    </div>
+                    <div class="main-content__aside__calendar__date">
+                        <p>
+                            <span class="main-content__aside__calendar__date__another-month">28　29　30　31　</span><span class="main-content__aside__calendar__date__holiday">01</span>　02　03<br>
+                            04　05　06　07　<span class="main-content__aside__calendar__date__holiday">08</span>　09　10 <br>
+                            11　12　13　14　<span class="main-content__aside__calendar__date__holiday">15</span>　16　17 <br>
+                            18　19　20　21　<span class="main-content__aside__calendar__date__holiday">22</span>　23　24 <br>
+                            25　26　27　28　<span class="main-content__aside__calendar__date__holiday">29</span>　30　<span class="main-content__aside__calendar__date__another-month">01</span>
+                            <br>
+                        </p>
+                    </div>
+                    <div class="main-content__aside__calendar__holiday">
+                        <div style="width: 20px; height: 20px; background-color: #FF0100;"></div>
+                        <p>= 定休日</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- フッター -->
+        <footer class="footer">
+            <!-- フッターナビ -->
+            <nav class="footer__nav">
+                <ul>
+                    <li class="footer__nav__list">
+                        <a href="https://twitter.com/Breeze_Group/" target="_blank"><img src="img_true/icon_twitter.svg" alt="ツイッター"></a>
+                    </li>
+                    <li class="footer__nav__list">
+                        <a href="https://www.instagram.com/breezegroup_officialaccount/" target="_blank"><img src="img_true/icon_insta.svg" alt="インスタグラム"></a>
+                    </li>
+                    <li class="footer__nav__list">
+                        <a href="https://www.facebook.com/bzg.shared/" target="_blank"><img src="img_true/icon_facebook.svg" alt="フェイスブック"></a>
+                    </li>
+                    <li class="footer__nav__list">
+                        <a href="mailto:vbz.shunta.iwasaki@gmail.com" target="_blank"><img src="img_true/icon_mail.svg" alt="メール"></a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- コピーライト -->
+            <div class="footer__copy">
+                <p>OJI GAME</p>
+            </div>
+        </footer>
+        <!-- AIチャット -->
+        <div class="chatbot">
+            <div class="chatbot__delete-btn">
+                <button type="button">
+                    <span></span>
+                    <span></span>
+                </butotn>
+            </div>
+            <div class="chatbot__content">
+                <div class="chatbot__content__info">
+                    <img src="img_true/frame_sp_info.svg" alt="枠">
+                    <p class="flash" id="chatbot-info-sp">
+                        おじいさんチャットBOT<br>に質問する
+                    </p>
+                </div>
+                <img class="chatbot__content__img" id="chatbot-img-sp" src="img_true/chatbot_sp.png" alt="チャットbot">
+                <form class="chatbot__content__question" id="chatbot-sp">
+                    <img src="img_true/frame_sp_question.svg" alt="枠">
+                    <!-- 画面遷移防止用のダミー入力欄 -->
+                    <input type="text" name="dummy" style="display:none;">
+                    <input type="text" size="35" value="" placeholder="質問を入力しEnter" name="question">
+                </form>
+            </div>
+        </div>
+        <!-- ページトップ遷移ボタン -->
+        <button class="page-top arrow"></butotn>
+        <script src="js/script_common.js"></script>
+        <script src="js/script_image.js"></script>
+    </body>
+</html>

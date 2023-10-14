@@ -1,0 +1,2942 @@
+@import './mixin';
+
+@font-face {
+    font-family: "PixelMplus10-Bold","PixelMplus10-Regular";
+    src :url("font/PixelMplus10-Bold.woff2"),
+        url("font/PixelMplus10-Bold.woff"),
+        url("font/PixelMplus10-Regular.woff2"),
+        url("font/PixelMplus10-Regular.woff"),
+}
+body {
+    font-family: "PixelMplus10";
+}
+a {
+    text-decoration: none;
+    color: #5a5a5a;
+}
+/* ヘッダーナビ */
+[id^="header-nav"] {
+    margin-right: 10px;
+}
+/* ディゾルブ */
+.white, [id^="dissolve"] {
+    position: absolute;
+    height: 295px;
+    width: 395px;
+    @include tab {
+        height: 400px;
+    }
+    @include sp {
+        height: 220px;
+    }
+}
+/* ディゾルブ(画像一覧) */
+.image-white, [id^="image-dissolve"]{
+    position: absolute;
+    height: 190px;
+    width: 275px;
+    @include tab {
+        width: 193px;
+    }
+    @include sp {
+        width: 150px;
+    }
+}
+/* ディゾルブ(記事詳細) */
+.article-white, [id^="article-dissolve"]{
+    position: absolute;
+    left: -10px;
+    height: 640px;
+    width: 900px;
+    z-index: 100;
+    @include tab {
+        height: 430px;
+        width: 640px;
+        left: auto;
+    }
+    @include sp {
+        height: 240px;
+        width: 350px;
+        left: auto;
+    }
+}
+/* マーカー */
+.marker {
+    background-color: #FFF729;
+}
+.hidden {
+    opacity: 0;
+}
+.fade {
+    opacity: 1;
+    animation: fade 1.1s forwards;
+    animation-delay: 1s;
+}
+@keyframes fade {
+    100% { opacity: 0; }
+}
+.page-header {
+    &__video-pc {
+        height: auto;
+        width: 100vw;
+        object-fit: cover;
+        @include sp {
+            display: none;
+        }
+    }
+    &__video-sp {
+        width: 100vw;
+        display: none;
+        @include sp {
+            display: block;
+        }
+    }
+}
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.red-text,.blue-text {
+    font-size: 24px;
+    margin-bottom: 30px;
+    @include tab {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    @include sp {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+}
+.red-text {
+    color: #FF0000;
+}
+.blue-text {
+    color: #2700FF;
+}
+/* 横線(フレーム合わせ) */
+.article__line {
+    background-image : linear-gradient(to right, #000 8px, transparent 8px);
+    background-size: 17px 2px;
+    background-repeat: repeat-x; 
+    background-position: left bottom;
+    margin: 23px 0 40px 0;
+    @include tab {
+        margin: 2px 0 20px 0;
+    }
+    @include sp {
+        margin: 2px 0 20px 0;
+    }
+}
+/* 横線(横幅いっぱい) */
+.max__line {
+    position: absolute;
+    width: 1280px;
+    top: 60px;
+    background-image : linear-gradient(to right, #000 8px, transparent 8px);
+    background-size: 17px 2px;
+    background-repeat: repeat-x; 
+    background-position: left bottom;
+    @include tab {
+        display: none;
+    }
+    @include sp {
+        display: none;
+    }
+}
+/* 横線(横幅いっぱい) */
+.max__line__list {
+    position: absolute;
+    width: 1280px;
+    top: 80px;
+    background-image : linear-gradient(to right, #000 8px, transparent 8px);
+    background-size: 17px 2px;
+    background-repeat: repeat-x; 
+    background-position: left bottom;
+    @include tab {
+        display: none;
+    }
+    @include sp {
+        display: none;
+    }
+}
+/* 横線(記事詳細) */
+.topic__line {
+    margin-top: -20px;
+    background-image : linear-gradient(to right, #000 8px, transparent 8px);
+    background-size: 17px 2px;
+    background-repeat: repeat-x; 
+    background-position: left bottom;
+    @include sp {
+        margin-top: -10px;
+    }
+}
+/* 横線(記事詳細) */
+.topic__line-bottom {
+    margin-top: 60px;
+    background-image : linear-gradient(to right, #000 8px, transparent 8px);
+    background-size: 17px 2px;
+    background-repeat: repeat-x; 
+    background-position: left bottom;
+    @include sp {
+        margin-top: 15px;
+    }
+}
+/* 横線(お店について) */
+.shopinfo__line {
+    width: 1280px;
+    background-image : linear-gradient(to right, #000 8px, transparent 8px);
+    background-size: 17px 2px;
+    background-repeat: repeat-x; 
+    background-position: left bottom;
+    margin-top: -15px;
+    @include tab {
+        display: none;
+    }
+    @include sp {
+        display: none;
+    }
+}
+/* 横線(ユーザ向け) */
+.user__line {
+    width: 96%;
+    background-image : linear-gradient(to right, #000 8px, transparent 8px);
+    background-size: 17px 2px;
+    background-repeat: repeat-x; 
+    background-position: left bottom;
+    margin: 15px auto 0 auto;
+    // @include tab {
+    //     display: none;
+    // }
+    // @include sp {
+    //     display: none;
+    // }
+}
+[class$="frame-pc"] {
+    display: block;
+    position: absolute;
+    @include tab {
+        display: none;
+    }
+    @include sp {
+        display: none;
+    }
+}
+[class$="frame-tab"] {
+    display: none;
+    position: absolute;
+    @include tab {
+        display: block;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+    @include sp {
+        display: none;
+    }
+}
+[class$="frame-sp"] {
+    display: none;
+    position: absolute;
+    @include sp {
+        display: block;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+}
+[class$="page-transition"] {
+    display: flex;
+    margin-top: 60px;
+    margin-left: 250px;
+    @include tab {
+        text-align: center;
+        margin-left: 180px;
+    }
+    @include sp {
+        text-align: center;
+        margin: 50px 0 0 50px;
+    }
+    img {
+        @include tab {
+            height: 35px;
+        }
+        @include sp {
+            height: 35px;
+        }
+    }
+    p {
+        margin-right: 30px;
+        font-size: 50px;
+        @include tab {
+            font-size: 30px;
+            margin-right: 20px;
+        }
+        @include sp {
+            font-size: 30px;
+            margin-right: 20px;
+        }
+    }
+    a:nth-child(1) {
+        text-decoration: underline;
+    }
+}
+/* 記事詳細の画面遷移ボタン(なぜかこれだけずれるため対応) */
+.main-content__article__article-topic__page-transition {
+    @include tab {
+        margin-left: 210px;
+    }
+    @include sp {
+        margin-left: 70px;
+    }
+    a:nth-child(6) {
+        margin: -10px 0 0 0;
+        @include tab {
+            margin-top: 2px;
+        }
+    }
+}
+/* タイピング風文字出現 */
+.typing {
+    opacity: 0;
+}
+
+.typing.active {
+    opacity: 1;
+}
+.main-content {
+    display: flex;
+    /* 記事部分 */
+    &__article {
+        position: relative;
+        width: 100%;
+        @include sp {
+            margin-left: 0px;
+        }
+        &__nav-pc {
+            display: flex;
+            list-style: none;
+            ul {
+                margin: 30px auto 30px auto;
+            }
+            @include tab {
+                display: none;
+            }
+            @include sp {
+                display: none;
+            }
+            &__list {
+                font-size: 20px;
+                display: inline-block;
+                margin-right: 25px;
+                /* menuナビの一番後ろに入れる装飾 */   
+                &:last-child{
+                    margin-right: 0px;
+                }
+                p {
+                    display: inline-block;
+                    position: relative;
+                    color: #000000;
+                    font-size: 30px;
+                }
+            }
+        }
+        &__nav-tab {
+            display: none;
+            list-style: none;
+            display: none;
+            margin: 15px auto 20px auto;
+            width: 650px;
+            overflow-x: scroll;
+            white-space: nowrap;                    /* 幅が狭くなっても折り返さない */
+            &__list {
+                font-size: 20px;
+                display: inline-block;
+                &::after {
+                    content: "/";
+                }
+                /* menuナビの一番後ろに入れる装飾 */
+                &:last-child::after{
+                    margin-right: 0px;
+                    content: none;
+                }
+                img {
+                    margin-right: 5px;
+                }
+                p {
+                    display: inline-block;
+                    position: relative;
+                    color: #000000;
+                    font-size: 16px;
+                }
+            }
+            @include tab {
+                display: flex;
+            }
+            @include sp {
+                display: flex;
+                width: 350px;
+            }
+        }
+        &__search-tab {
+            position: relative;
+            width: 290px;
+            margin: 20px auto 0 auto;
+            display: none;
+            &__input {
+                display: flex;
+                position: absolute;
+                top: 5px;
+                left: 10px;
+                img {
+                    height: 20px;
+                }
+                input {
+                    margin-left: 10px;
+                    width: 15em;
+                }
+            }
+            @include tab {
+                display: block;
+            }
+            @include sp {
+                display: block;
+            }
+        }
+        &__profile-tab {
+            font-size: 20px;
+            display: none;
+            margin: 0 auto;
+            width: 650px;
+            &__img {
+                display: block;
+                margin: 40px auto 0 auto;
+            }
+            &__name {
+                display: flex;
+                justify-content: center;
+                font-size: 24px;
+                margin-top: 20px;
+            }
+            &__text {
+                display: flex;
+                justify-content: center;
+                color: #5a5a5a;
+                margin-top: 10px;
+            }
+            &__to-shopinfo {
+                display: block;
+                text-align: right;
+                color: #000;
+                margin-top: 10px;
+                &:hover {
+                    color: #4a4a4a;
+                }
+            }
+            @include tab {
+                display: block;
+            }
+            @include sp {
+                display: block;
+                width: 350px;
+            }
+        }
+        /* 記事(メイン) */
+        &__topic {
+            position: relative;
+            margin: 50px 0 0 55px;
+            width: 850px;
+            @include tab {
+                margin: 65px auto 0 auto;
+                width: 580px;
+            }
+            @include sp {
+                margin: 65px auto 0 auto;
+                width: 300px;
+            }
+            &__part {
+                &__title {
+                    font-size: 30px;
+                    margin: 10px 0;
+                    a {
+                        color: #000000;
+                        &:hover {
+                            color: #5a5a5a;
+                        }
+                    }
+                    @include tab {
+                        font-size: 20px;
+                        p {
+                            margin-bottom: 5px;
+                        }
+                    }
+                    @include sp {
+                        font-size: 20px;
+                        p {
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+                &__content {
+                    display: flex;
+                    height: auto;
+                    margin: 30px 0 0 10px;
+                    @include tab {
+                        display: block;
+                        margin: 0;
+                    }
+                    @include sp {
+                        display: block;
+                        margin: 0;
+                    }
+                    &__img {
+                        img {
+                            @include tab {
+                                width: 100%;
+                            }
+                        }
+                        img {
+                            @include sp {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    &__text {
+                        margin-left: 30px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: auto;
+                        font-size: 24px;
+                        @include tab {
+                            font-size: 16px;
+                            margin-left: 0;
+                            width: 100%;
+                        }
+                        @include sp {
+                            font-size: 16px;
+                            margin-left: 0;
+                            width: 100%;
+                        }
+                        &__topic {
+                            color: #5A5A5A;
+                            max-height: 200px;
+                            max-width: 420px;
+                            &:hover {
+                                color: #000000;
+                            }
+                            @include tab {
+                                margin-top: 20px;
+                                max-width: 580px;
+                            }
+                            @include sp {
+                                margin-top: 20px;
+                                height: 116px;
+                            }
+                            p {
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 7;
+                                overflow: hidden;
+                                @include sp {
+                                    -webkit-line-clamp: 5;
+                                }
+                            }
+                        }
+                        &__status {
+                            display: flex;
+                            font-size: 30px;
+                            color: #5A5A5A;
+                            @include tab {
+                                font-size: 20px;
+                                margin: 10px 0 0 auto;
+                            }
+                            @include sp {
+                                font-size: 20px;
+                                margin: 10px 0 0 auto;
+                            }
+                            &__good {
+                                display: flex;
+                                margin-left: 10px;
+                                img {
+                                    @include tab {
+                                        width: 22px;
+                                        height: 22px;
+                                    }
+                                    @include sp {
+                                        width: 20px;
+                                        height: 20px;
+                                    }
+                                }
+                                p {
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /* 記事(画像一覧) */
+        &__image-topic {
+            position: relative;
+            margin: 50px 0 0 50px;
+            width: 850px;
+            @include tab {
+                margin: 65px auto 0 auto;
+                width: 580px;
+            }
+            @include sp {
+                margin: 48px auto 0 auto;
+                width: 300px;
+            }
+            &__topic {
+                display: grid;
+                gap: 20px 10px;
+                /* 275px〜275pxに伸縮するセルを繰り返し横に並べます。 */
+                grid-template-columns: repeat(auto-fit, minmax(275px, 275px));
+                @include tab {
+                    gap: 5px 10px;
+                    grid-template-columns: repeat(auto-fit, minmax(185px, 185px));
+                }
+                @include sp {
+                    gap: 8px 10px;
+                    grid-template-columns: repeat(auto-fit, minmax(145px, 145px));
+                }
+                &__part {
+                    &__img {
+                        &:hover {
+                            transform: translate(2px,2px);
+                        }
+                        height: 185px;
+                        @include tab {
+                            height: 130px;
+                        }
+                        @include sp {
+                            height: 98px;
+                        }
+                    }
+                }
+            }
+        }
+        &__article-topic {
+            font-size: 30px;
+            margin: 40px 0 0 0;
+            width: 873px;
+            line-height: 40px;
+            @include tab {
+                width: 650px;
+                margin: 0 auto;
+                font-size: 25px;
+            }
+            @include sp {
+                width: 350px;
+                margin: 0 auto;
+                font-size: 16px;
+                line-height: 18px;
+            }
+            &__image {
+                @include tab {
+                    display: flex;
+                    margin: 0 auto;
+                }
+                @include sp {
+                    display: flex;
+                    margin: 0 auto;
+                }
+                &__img {
+                    margin-left: -30px;
+                    @include tab {
+                        width: 98%;
+                        margin: 0 auto;
+                    }
+                    @include sp {
+                        width: 98%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+            &__category {
+                font-size: 14px;
+                position: absolute;
+                top: 190px;
+                left: 30px;
+                @include tab {
+                    position: relative;
+                    top: -410px;
+                    left: 50px;
+                    width: 100px;
+                }
+                @include sp {
+                    position: relative;
+                    top: -220px;
+                    left: 30px;
+                    width: 100px;
+                }
+                p {
+                    position: absolute;
+                    top: 0px;
+                    left: 10px;
+                    @include sp {
+                        font-size: 10px;
+                        top: 5px;
+                    }
+                }
+            }
+            &__title {
+                font-size: 40px;
+                margin-top: -10px;
+                @include tab {
+                    font-size: 35px;
+                    margin-top: -50px;
+                }
+                @include sp {
+                    font-size: 22px;
+                    margin-top: -30px;
+                }
+            }
+            &__topic {
+                &__opening {
+                    margin-top: 50px;
+                }
+                &__headline {
+                    display: flex;
+                    margin-top: 40px;
+                    img {
+                        height: 100%;
+                        @include tab {
+                            height: 40px;
+                            margin-top: 4px;
+                        }
+                        @include sp {
+                            height: 20px;
+                            margin-top: 4px;
+                        }
+                    }
+                    p {
+                        margin: 4px 0 0 10px;
+                        font-size: 35px;
+                        @include tab {
+                            font-size: 30px;
+                        }
+                        @include sp {
+                            font-size: 20px;
+                        }
+                    }
+                }
+                &__top {
+                    margin-top: 10px;
+                }
+                &__headline-sub {
+                    display: flex;
+                    margin: 5px 0 0 1em;
+                    p {
+                        margin-left: 10px;
+                        margin-top: 0;
+                        @include sp {
+                            margin-left: 5px;
+                        }
+                    }
+                    img {
+                        @include sp {
+                            height: 15px;
+                        }
+                    }
+                }
+                &__bottom {
+                    margin-top: 25px;
+                }
+                &__table {
+                    margin: 20px 0 0 1em;
+                    table {
+                        margin: 12px 0 0 1em;
+                        border-collapse: collapse;
+                        @include tab {
+                            margin-top: 5px;
+                        }
+                    }
+                    td {
+                    border: solid 1px black;
+                    height: 39px;
+                    @include sp {
+                        height: 22px;
+                    }
+                    p {
+                        margin-left: 10px;
+                        font-size: 26px;
+                        @include tab {
+                            font-size: 20px;
+                        }
+                        @include sp {
+                            font-size: 14px;
+                            margin-left: 5px;
+                        }
+                    }
+                    }
+                    td:nth-child(1) {
+                        width: 128px;
+                        @include sp {
+                            width: 200px;
+                        }
+                    }
+                    td:nth-child(2) {
+                        width: 695px;
+                    }
+                }
+                &__ending {
+                    margin-top: 70px;
+                }
+                &__status {
+                    display: flex;
+                    margin: 50px 0 0 -5px;
+                    &__good {
+                        display: flex;
+                        margin-left: 30px;
+                        @include sp {
+                            margin-left: 10px;
+                        }
+                        img {
+                            @include sp {
+                                height: 50%;
+                                margin-top: 1px;
+                            }
+                        }
+                    }
+                    p {
+                        margin-left: 10px;
+                        color: #5a5a5a;
+                        @include sp {
+                            margin-left: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* お店について */
+    &__shopinfo {
+        @include tab  {
+            margin: 0 auto;
+        }
+        @include sp  {
+            margin: 0 auto;
+        }
+        &__head {
+            display: flex;
+            @include tab {
+                display: block;
+            }
+            @include sp {
+                display: block;
+            }
+            &__nav-pc {
+                display: flex;
+                list-style: none;
+                width: 943px;
+                overflow-x: scroll;
+                white-space: nowrap;                    /* 幅が狭くなっても折り返さない */
+                ul {
+                    margin: 30px auto 30px auto;
+                }
+                @include tab {
+                    display: none;
+                }
+                @include sp {
+                    display: none;
+                }
+                &__list {
+                    font-size: 20px;
+                    display: inline-block;
+                    margin-right: 25px;
+                    /* menuナビの一番後ろに入れる装飾 */   
+                    &:last-child{
+                        margin-right: 0px;
+                    }
+                    p {
+                        display: inline-block;
+                        position: relative;
+                        color: #000000;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        &__body {
+            &__shopinfo {
+                display: flex;
+                font-family: 'ベストテン-CRT';
+                font-size: 40px;
+                margin-top: 120px;
+                @include tab {
+                    display: block;
+                    margin: 40px auto 0 auto;
+                    font-size: 30px;
+                    width: 600px;
+                }
+                @include sp {
+                    display: block;
+                    margin: 40px auto 0 auto;
+                    font-size: 16px;
+                    width: 340px;
+                    line-height: 19px;
+                }
+                &__image {
+                    @include tab {
+                        display: flex;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 400px;
+                    }
+                    @include sp {
+                        display: flex;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 200px;
+                    }
+                }
+                &__text {
+                    @include tab {
+                        text-align: center;
+                    }
+                    @include sp {
+                        text-align: center;
+                    }
+                    &__image {
+                        margin-top: 20px;
+                        @include tab {
+                            width: 600px;
+                        }
+                        @include sp {
+                            width: 340px;
+                            margin-top: 10px;
+                        }
+                    }
+                    &__txt {
+                        margin: -320px 0 0 60px;
+                        width: 658px;
+                        line-height: 44px;
+                        @include tab {
+                            margin: -250px auto 0 auto;
+                            text-align: left;
+                            width: 600px;
+                        }
+                        @include sp {
+                            margin: -120px auto 0 auto;
+                            text-align: left;
+                            width: 340px;
+                            line-height: 19px;
+                        }
+                    }
+                }
+            }
+            &__title {
+                margin-top: 110px;
+                font-family: 'ベストテン-CRT';
+                @include tab {
+                    width: 600px;
+                    margin: 110px auto 0 auto;
+                }
+                @include sp {
+                    width: 340px;
+                    margin: 80px auto 0 auto;
+                }
+                img {
+                    display: flex;
+                    margin: 0 auto;
+                    @include tab {
+                        width: 600px;
+                    }
+                    @include sp {
+                        width: 340px;
+                    }
+                }
+                &__text {
+                    margin: -240px 0 0 260px;
+                    @include tab {
+                        margin: -245px 0 0 100px;
+                    }
+                    @include sp {
+                        margin: -130px 0 0 110px;
+                    }
+                    &__reg-text {
+                        font-size: 65px;
+                        @include tab {
+                            font-size: 35px;
+                            margin-top: 110px;
+                            margin-left: -10px;
+                        }
+                        @include sp {
+                            font-size: 24px;
+                            margin-top: 50px;
+                            margin-left: -70px;
+                        }
+                    }
+                    &__big-text {
+                        margin-left: 170px;
+                        font-size: 90px;
+                        @include tab {
+                            font-size: 52px;
+                            margin-left: 70px;
+                        }
+                        @include sp {
+                            font-size: 34px;
+                            margin-left: -30px;
+                        }
+                    }
+                }
+            }
+            &__assortment {
+                display: flex;
+                margin-top: 150px;
+                justify-content: space-between;
+                @include tab {
+                    display: block;
+                    text-align: center;
+                    width: 600px;
+                    margin: -60px auto 0 auto;
+                }
+                @include sp {
+                    display: block;
+                    text-align: center;
+                    width: 340px;
+                    margin: -60px auto 0 auto;
+                }
+                &__image {
+                    height: 100%;
+                    margin-top: 125px;
+                    @include sp {
+                        width: 70%;
+                        margin-top: 100px;
+                    }
+                }
+                &__text {
+                    color: #ffffff;
+                    line-height: 44px;
+                    @include tab {
+                        margin-top: 20px;
+                    }
+                    @include sp {
+                        margin-top: 20px;
+                        line-height: 17px;
+                    }
+                    &__title {
+                        margin: -470px 0 0 70px;
+                        font-size: 50px;
+                        @include tab {
+                            font-size: 30px;
+                            margin: -350px 0 0 15px;
+                            text-align: left;
+                        }
+                        @include sp {
+                            font-size: 20px;
+                            margin: -185px 0 0 15px;
+                            text-align: left;
+                        }
+                    }
+                    &__margin {
+                        margin-top: 30px;
+                        @include tab {
+                            margin-top: 5px;
+                        }
+                        @include sp {
+                            margin-top: 10px;
+                        }
+                    }
+                    &__body {
+                        margin: 0 0 0 70px;
+                        font-size: 35px;
+                        width: 745px;
+                        @include tab {
+                            font-size: 22px;
+                            text-align: left;
+                            width: 550px;
+                            margin: 0 auto;
+                        }
+                        @include sp {
+                            font-size: 16px;
+                            text-align: left;
+                            width: 310px;
+                            margin: 0 auto;
+                        }
+                    }
+                    img {
+                        @include tab {
+                            width: 100%;
+                        }
+                        @include sp {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            &__experience {
+                display: flex;
+                margin-top: 125px;
+                justify-content: space-between;
+                @include tab {
+                    display: block;
+                    text-align: center;
+                    width: 600px;
+                    margin: 80px auto 0 auto;
+                }
+                @include sp {
+                    display: block;
+                    text-align: center;
+                    width: 340px;
+                    margin: 65px auto 0 auto;
+                }
+                &__text {
+                    color: #ffffff;
+                    line-height: 44px;
+                    @include tab {
+                        margin-top: 20px;
+                    }
+                    @include sp {
+                        margin-top: 20px;
+                        line-height: 17px;
+                    }
+                    &__title {
+                        margin: -420px 0 0 70px;
+                        font-size: 50px;
+                        @include tab {
+                            font-size: 30px;
+                            margin: -320px 0 0 25px;
+                            text-align: left;
+                        }
+                        @include sp {
+                            font-size: 20px;
+                            margin: -180px 0 0 15px;
+                            text-align: left;
+                        }
+                    }
+                    &__body {
+                        margin: 30px 0 0 70px;
+                        font-size: 35px;
+                        width: 745px;
+                        @include tab {
+                            font-size: 22px;
+                            text-align: left;
+                        }
+                        @include sp {
+                            font-size: 16px;
+                            text-align: left;
+                        }
+                    }
+                    img {
+                        @include tab {
+                            width: 100%;
+                        }
+                        @include sp {
+                            width: 100%;
+                            height: 200px;
+                        }
+                    }
+                }
+                &__image {
+                    height: 100%;
+                    margin-top: 55px;
+                    @include tab {
+                        display: none;
+                    }
+                    @include sp {
+                        display: none;
+                    }
+                    &__tab {
+                        display: none;
+                        margin: 0 auto;
+                        @include tab {
+                            display: block;
+                            height: 100%;
+                        }
+                        @include sp {
+                            display: block;
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+            &__purchase {
+                display: flex;
+                margin-top: 80px;
+                justify-content: space-between;
+                @include tab {
+                    display: block;
+                    text-align: center;
+                    width: 600px;
+                    margin: -20px auto 0 auto;
+                }
+                @include sp {
+                    display: block;
+                    text-align: center;
+                    width: 340px;
+                    margin: -50px auto 0 auto;
+                }
+                &__image {
+                    height: 100%;
+                    margin-top: 125px;
+                    @include sp {
+                        width: 70%;
+                    }
+                }
+                &__text {
+                    color: #ffffff;
+                    line-height: 44px;
+                    @include tab {
+                        margin-top: 20px;
+                    }
+                    @include sp {
+                        margin-top: 20px;
+                        line-height: 17px;
+                    }
+                    &__title {
+                        margin: -470px 0 0 70px;
+                        font-size: 50px;
+                        @include tab {
+                            font-size: 30px;
+                            margin: -350px 0 0 25px;
+                            text-align: left;
+                        }
+                        @include sp {
+                            font-size: 20px;
+                            margin: -185px 0 0 15px;
+                            text-align: left;
+                        }
+                    }
+                    &__body {
+                        margin: 30px 0 0 70px;
+                        font-size: 35px;
+                        width: 745px;
+                        @include tab {
+                            font-size: 22px;
+                            text-align: left;
+                        }
+                        @include sp {
+                            font-size: 16px;
+                            text-align: left;
+                        }
+                    }
+                    img {
+                        @include tab {
+                            width: 100%;
+                        }
+                        @include sp {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            &__other {
+                margin-top: 180px;
+                display: flex;
+                justify-content: space-between;
+                @include tab {
+                    display: block;
+                    margin-top: 100px;
+                }
+                @include sp {
+                    display: block;
+                    margin-top: 100px;
+                }
+                &__shopinfo {
+                    width: 677px;
+                    @include tab {
+                        margin: 0 auto;
+                        width: 600px;
+                    }
+                    @include sp {
+                        margin: 0 auto;
+                        width: 340px;
+                    }
+                    &__title {
+                        font-size: 45px;
+                        @include tab {
+                            font-size: 35px;
+                        }
+                        @include sp {
+                            font-size: 21px;
+                        }
+                    }
+                    &__text {
+                        line-height: 45px;
+                        font-size: 30px;
+                        @include tab {
+                            font-size: 25px;
+                            line-height: 35px;
+                        }
+                        @include sp {
+                            font-size: 16px;
+                            line-height: 20px;
+                        }
+                    }
+                    &__map {
+                        margin-top: 20px;
+                        width: 677px;
+                        height: 429px;
+                        @include tab {
+                            width: 600px;
+                        }
+                        @include sp {
+                            width: 340px;
+                            height: 217px;
+                        }
+                        iframe {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                &__calendar {
+                    width: 530px;
+                    @include tab {
+                        margin: 80px auto 0 auto;
+                        width: 600px;
+                    }
+                    @include sp {
+                        margin: 30px auto 0 auto;
+                        width: 340px;
+                    }
+                    &__title {
+                        font-size: 45px;
+                        @include tab {
+                            font-size: 35px;
+                        }
+                        @include sp {
+                            font-size: 21px;
+                        }
+                    }
+                    &__month {
+                        margin-top: -5px;
+                        font-size: 40px;
+                        @include tab {
+                            margin-left: 40px;
+                        }
+                        @include sp {
+                            margin-left: 40px;
+                            font-size: 20px;
+                        }
+                    }
+                    &__week {
+                        margin-top: 15px;
+                        font-size: 40px;
+                        @include tab {
+                            margin-left: 40px;
+                        }
+                        @include sp {
+                            margin-left: 40px;
+                            font-size: 20px;
+                        }
+                    }
+                    &__date {
+                        margin-top: 15px;
+                        line-height: 55px;
+                        font-size: 40px;
+                        @include tab {
+                            margin-left: 40px;
+                        }
+                        @include sp {
+                            margin-left: 40px;
+                            font-size: 20px;
+                            line-height: 28px;
+                        }
+                        &__another-month {
+                            color: #5a5a5a;
+                        }
+                        &__holiday {
+                            color: #FF0100;
+                        }
+                    }
+                    &__holiday {
+                        display: flex;
+                        font-size: 32px;
+                        margin: 20px 0 0 65%;
+                        &__square { 
+                            width:33px; 
+                            height:33px; 
+                            background-color: #FF0100;
+                            @include sp {
+                                width: 18px;
+                                height: 18px;
+                            }
+                        }
+                        p {
+                            margin-left: 20px;
+                            @include sp {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            &__catchcopy {
+                margin-top: 200px;
+                text-align: center;
+                @include tab {
+                    margin-top: 100px;
+                }
+                @include sp {
+                    margin-top: 40px;
+                }
+                img {
+                    @include sp {
+                        height: 128px;
+                    }
+                }
+                p {
+                    text-align: left;
+                    margin: -280px 0 0 525px;
+                    font-size: 44px;
+                    @include tab {
+                        margin-left: 200px;
+                    }
+                    @include sp {
+                        margin: -77px 0 0 143px;
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+
+    }
+    /* リスト部分 */
+    &__list {
+        position: relative;
+        font-size: 30px;
+        width: 873px;
+        line-height: 40px;
+        @include tab {
+            width: 650px;
+            margin: 0 auto;
+            font-size: 25px;
+        }
+        @include sp {
+            width: 350px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 18px;
+        }
+        &__margin {
+            margin-top: 25px;
+        }
+        &__title {
+            margin-top: 45px;
+            font-size: 35px;
+        }
+        &__list {
+            &__topic {
+                display: flex;
+                &__title {
+                    width: 500px;
+                }
+                &__date {
+                    width: 200px;
+                }
+                &__good {
+                    display: flex;
+                    p {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        &__link {
+            margin-top: 45px;
+            text-align: center;
+            a {
+                color: #000000;
+            }
+        }
+    }
+    /* カテゴリ/タグ */
+    &__category {
+        margin: 0 auto;
+        @include tab {
+            width: 650px;
+            height: 500px;
+            max-height: 500px;
+            overflow-y: scroll;
+            margin-bottom: 50px;
+        }
+        @include sp {
+            width: 350px;
+            height: 500px;
+            max-height: 500px;
+            overflow-y: scroll;
+            margin-bottom: 50px;
+        }
+        &__title {
+            margin-top: 45px;
+            font-size: 35px;
+            @include tab {
+                font-size: 30px;
+            }
+            @include sp {
+                font-size: 25px;
+            }
+        }
+        &__list {
+            margin-top: 25px;
+            p {
+                margin-top: 10px;
+                font-size: 30px;
+                @include tab {
+                    font-size: 25px;
+                }
+                @include sp {
+                    font-size: 16px;
+                }
+            }
+            &__button {
+                display: flex;
+                margin-top: 15px;
+                span {
+                    width: 30px;
+                    height: 4px;
+                    margin-left: 10px;
+                    background-color: #5A5A5A;
+                    position: relative;
+                    transition: ease .2s;               /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
+                    @include tab {
+                        width: 20px;
+                        height: 3px;
+                    }
+                    @include sp {
+                        width: 14px;
+                        height: 2px;
+                    }
+                }
+                span:nth-child(2) {
+                    top: 25px;
+                    transform: rotate(90deg);
+                    @include tab {
+                        top: 22px;
+                    }
+                    @include sp {
+                        top: 18px;
+                    }
+                }
+                span:nth-child(3) {
+                    top: 25px;
+                    left: -39px;
+                    @include tab {
+                        top: 22px;
+                        left: -30px;
+                    }
+                    @include sp {
+                        top: 17.5px;
+                        left: -23.5px;
+                    }
+                }
+            }
+            &__topic {
+                display: none;
+                line-height: 0;
+                overflow: hidden;
+                margin-left: 1em;
+                &__content {
+                    display: flex;
+                    &__title {
+                        width: 500px;
+                    }
+                    &__date {
+                        width: 200px;
+                    }
+                    &__good {
+                        display: flex;
+                        img {
+                            margin-top: 10px;
+                            @include tab {
+                                margin-top: 12px;
+                            }
+                            @include sp {
+                                height: 15px;
+                                margin-top: 12px;
+                            }
+                        }
+                        p {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        &__link {
+            font-size: 30px;
+            text-align: center;
+            margin: 40px auto;
+            @include tab {
+                width: 650px;
+            }
+            @include sp {
+                width: 350px;
+                font-size: 20px;
+            }
+            p {
+                color: #000000;
+            }
+        }
+    }
+    /* 年月 */
+    &__date {
+        margin: 0 auto;
+        position: relative;
+        @include tab {
+            width: 650px;
+            font-size: 25px;
+        }
+        @include sp {
+            width: 350px;
+        }
+        &__title {
+            margin-top: 45px;
+            font-size: 35px;
+            @include tab {
+                font-size: 30px;
+            }
+            @include sp {
+                font-size: 25px;
+            }
+        }
+        &__list {
+            margin-top: 10px;
+            font-size: 30px;
+            @include tab {
+                height: 500px;
+                max-height: 500px;
+                overflow-y: scroll;
+                margin-bottom: 50px;
+            }
+            @include sp {
+                height: 500px;
+                max-height: 500px;
+                overflow-y: scroll;
+                margin-bottom: 50px;
+            }
+            p {
+                margin-top: 10px;
+                @include tab {
+                    font-size: 25px;
+                }
+                @include sp {
+                    font-size: 16px;
+                }
+            }
+            &__button {
+                display: flex;
+                margin: 15px 0 -10px 0;
+                span {
+                    width: 30px;
+                    height: 4px;
+                    margin-left: 10px;
+                    background-color: #5A5A5A;
+                    position: relative;
+                    transition: ease .2s;               /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
+                    @include tab {
+                        width: 20px;
+                        height: 3px;
+                    }
+                    @include sp {
+                        width: 14px;
+                        height: 2px;
+                    }
+                }
+                span:nth-child(2) {
+                    top: 24px;
+                    transform: rotate(90deg);
+                    @include tab {
+                        top: 22px;
+                    }
+                    @include sp {
+                        top: 18px;
+                    }
+
+                }
+                span:nth-child(3) {
+                    top: 24px;
+                    left: -39px;
+                    @include tab {
+                        top: 22px;
+                        left: -30px;
+                    }
+                    @include sp {
+                        top: 17.5px;
+                        left: -23.5px;
+                    }
+                }
+            }
+            &__button2 {
+                &__button {
+                    margin: 5px 0 0 1em;
+                    display: none;
+                    @include sp {
+                        height: 0.5em;
+                    }
+                    span {
+                        display: flex;
+                        width: 30px;
+                        height: 4px;
+                        margin-left: 10px;
+                        background-color: #5A5A5A;
+                        position: relative;
+                        transition: ease .2s;               /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
+                        @include tab {
+                            width: 20px;
+                            height: 3px;
+                        }
+                        @include sp {
+                            width: 14px;
+                            height: 2px;
+                        }
+                    }
+                    span:nth-child(2) {
+                        top: 23px;
+                        left: -2px;
+                        transform: rotate(90deg);
+                        @include tab {
+                            top: 22px;
+                        }
+                        @include sp {
+                            top: 18px;
+                        }
+                    }
+                    span:nth-child(3) {
+                        top: 23px;
+                        left: -41px;
+                        @include tab {
+                            top: 22px;
+                            left: -31.5px;
+                        }
+                        @include sp {
+                            top: 18px;
+                            left: -26px;
+                        }
+                    }
+                }
+                &__topic {
+                    display: none;
+                    line-height: 0;
+                    overflow: hidden;
+                    margin-left:1em;
+                    @include sp {
+                        margin-top: -10px;
+                    }
+                    &__content {
+                        display: flex;
+                        margin-top: 10px;
+                        &__title {
+                            width: 500px;
+                        }
+                        &__date {
+                            width: 200px;
+                        }
+                        &__good {
+                            display: flex;
+                            img {
+                                margin-top: 15px;
+                                height: 25px;
+                                @include tab {
+                                    margin-top: 12px;
+                                }
+                                @include sp {
+                                    height: 15px;
+                                    margin-top: 12px;
+                                }
+                            }
+                            p {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__link {
+            font-size: 30px;
+            text-align: center;
+            margin: 40px 0;
+            @include sp {
+                font-size: 20px;
+            }
+            p {
+                color: #000000;
+            }
+        }
+    }
+    &__calendar {
+        margin: 0 auto;
+        @include tab {
+            width: 650px;
+        }
+        @include sp {
+            width: 350px;
+        }
+        &__title {
+            margin-top: 45px;
+            font-size: 35px;
+            @include tab {
+                font-size: 30px;
+            }
+            @include sp {
+                font-size: 25px;
+            }
+        }
+        &__calendar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 405px);
+            column-gap: 80px;
+            margin-top: 20px;
+            @include tab {
+                grid-template-columns: repeat(auto-fit, 310px);
+                column-gap: 30px;
+            }
+            &__part {
+                font-size: 31px;
+                display: block;
+                width: 405px;
+                margin-top: 10px;
+                @include tab {
+                    font-size: 23px;
+                    width: 310px;
+                }
+                @include sp {
+                    font-size: 26px;
+                    width: 350px;
+                }
+                &__month {
+                    font-size: 38px;
+                    @include tab {
+                        font-size: 29px;
+                    }
+                    @include sp {
+                        font-size: 31px;
+                    }
+                }
+                &__week {
+                    margin-top: 10px;
+                }
+                &__date {
+                    margin-top: 10px;
+                    &__another-month {
+                        color: #5a5a5a;
+                    }
+                    &__holiday {
+                        color: #FF0100;
+                    }
+                }
+                &__holiday {
+                    display: flex;
+                    font-size: 25px;
+                    margin: 20px 0 0 67%;
+                    @include tab {
+                        font-size: 18px;
+                        margin-left: 65%;
+                    }
+                    @include sp {
+                        font-size: 22px;
+                        margin-left: 65%;
+                    }
+                    &__square {
+                        width: 20px; 
+                        height: 20px; 
+                        background-color: #FF0100;
+                        @include tab {
+                            width: 15px;
+                            height: 15px;
+                        }
+                        @include sp {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                    p {
+                        margin: -4px 0 0 10px;
+                        @include tab {
+                            margin-top: -2px;
+                        }
+                        @include sp {
+                            margin-top: -2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* サイドバー部分 */
+    &__aside {
+        font-size: 22px;
+        padding-left: 0px;
+        min-width: 330px;
+        @include tab {
+            display: none;
+        }
+        @include sp {
+            display: none;
+        }
+        &__title {
+            font-size: 28px;
+            color: #000000;
+            &:hover {
+                color: #5A5A5A;
+            }
+        }
+        &__search {
+            position: relative;
+            margin: 20px 0 0 10px;
+            @include tab {
+                display: none;
+            }
+            @include sp {
+                display: none;
+            }
+            &__input {
+                display: flex;
+                position: absolute;
+                top: 10px;
+                left: 20px;
+                input {
+                    margin-left: 10px;
+                }
+            }
+        }
+        &__profile {
+            font-size: 20px;
+            &__img {
+                margin: 55px 0 0 10px;
+            }
+            &__name {
+                font-size: 24px;
+                margin-top: 35px;
+                text-align: center;
+            }
+            &__text {
+                margin-top: 10px;
+                color: #5a5a5a;
+            }
+            &__to-shopinfo {
+                text-align: right;
+                color: #000;
+                &:hover {
+                    color: #4a4a4a;
+                }
+            }
+        }
+        &__chatbot {
+            margin: 35px 0 0 10px;
+            &__info {
+                position: relative;
+                p {
+                    width: 270px;
+                    font-size: 24px;
+                    position: absolute;
+                    top: 25px;
+                    left: 25px;
+                    color: #5a5a5a;
+                }
+            }
+            &__img {
+                margin-top: 20px;
+            }
+            &__question {
+                margin-top: 20px;
+                position: relative;
+                input {
+                    position: absolute;
+                    top: 22px;
+                    left: 20px;
+                    font-size: 24px;
+                    width: 11em;
+                }
+            }
+        }
+        &__popular {
+            margin-top: 50px;
+            &__topic {
+                p {
+                    margin-top: 10px;
+                    &:hover {
+                        color: #000000;
+                    }
+                }
+            }
+        }
+        &__new {
+            margin-top: 50px;
+            &__topic {
+                p {
+                    margin-top: 10px;
+                    &:hover {
+                        color: #000000;
+                    }
+                }
+            }
+        }
+        &__category {
+            margin-top: 50px;
+            &__topic {
+                p {
+                    margin-top: 10px;
+                    &:hover {
+                        color: #000000;
+                    }
+                }
+            }
+        }
+        &__tag {
+            margin-top: 110px;
+            &__topic {
+                p {
+                    margin-top: 10px;
+                    &:hover {
+                        color: #000000;
+                    }
+                }
+            }
+        }
+        &__date {
+            margin-top: 50px;
+            &__topic {
+                max-height: 320px;
+                min-height: 320px;
+                overflow-y: scroll;
+                margin-top: -10px;
+                p {
+                    margin-top: 10px;
+                    &:hover {
+                        color: #000000;
+                    }
+                }
+                &__button {
+                    display: flex;
+                    span {
+                        width: 15px;
+                        height: 2px;
+                        margin-left: 10px;
+                        background-color: #5A5A5A;
+                        position: relative;
+                        transition: ease .2s;               /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
+                    }
+                    span:nth-child(2) {
+                        top: 20px;
+                        transform: rotate(90deg);
+                    }
+                    span:nth-child(3) {
+                        top: 20px;
+                        left: -25px;
+                    }
+                }
+                &__month {
+                    display: none;
+                    line-height: 0;
+                    overflow: hidden;
+                    p {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        &__calendar {
+            font-size: 25px;
+            &__month {
+                font-size: 30px;
+            }
+            &__week {
+                margin-top: 10px;
+            }
+            &__date {
+                margin-top: 10px;
+                &__another-month {
+                    color: #5a5a5a;
+                }
+                &__holiday {
+                    color: #FF0100;
+                }
+            }
+            &__holiday {
+                display: flex;
+                font-size: 20px;
+                margin: 20px 0 0 65%;
+                p {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+/* 横線(サイド) */
+.aside__line {
+    background-image : linear-gradient(to right, #000 8px, transparent 8px);
+    background-size: 17px 2px;
+    background-repeat: repeat-x; 
+    background-position: left bottom;
+    margin: -10px 0 20px 0;
+    @include tab {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* アコーディオンメニュー */
+/* 月情報 */
+.open-date {
+    line-height: normal;
+    height: 100%;
+    display: block;
+}
+/* ＋表記 → -表記 */
+.minus {
+    span:nth-child(2) {
+        transform: rotate(0deg);
+    }
+    span:nth-child(3) {
+        left: -25px;
+    }
+}
+.minus-cate {
+    span:nth-child(2) {
+        transform: rotate(0deg);
+    }
+    span:nth-child(3) {
+        left: -39px;
+        @include tab {
+            left: -30px;
+        }
+        @include sp {
+            top: 18px;
+            left: -24px;
+        }
+    }
+}
+.minus-date {
+    span:nth-child(2) {
+        transform: rotate(0deg);
+    }
+    span:nth-child(3) {
+        left: -39px;
+        @include tab {
+            left: -30px;
+        }
+        @include sp {
+            top: 18px;
+            left: -24px;
+        }
+    }
+}
+.minus-date2 {
+    span:nth-child(2) {
+        transform: rotate(0deg);
+    }
+    span:nth-child(3) {
+        left: -41px;
+        @include tab {
+            left: -32px;
+        }
+        @include sp {
+            left: -26px;
+        }
+    }
+}
+/* 月情報(年月) */
+.open-date-date {
+    line-height: normal;
+    height: 1em;
+    opacity: 1;
+    display: flex;
+}
+.open-date-date2 {
+    line-height: normal;
+    height: 4.5em;
+    display: block;
+}
+.user-content {
+    &__icon {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        img {
+            @include sp {
+                height: 25px;
+            }
+        }
+        p {
+            font-size: 30px;
+            margin: 7px 0 0 10px;
+            @include sp {
+                font-size: 16px;
+            }
+        }
+    }
+    &__action {
+        color: #ffffff;
+        background-color: #000000;
+        text-align: center;
+        font-size: 20px;
+        margin: 50px 0 50px 0;
+        &__user-name , &__password, &__mail {
+            width: 600px;
+            height: 100px;
+            margin: 0 auto;
+            input {
+                position: relative;
+                top: -70px;
+                left: -40px;
+                @include sp {
+                    top: -50px;
+                    left: 15px;
+                }
+            }
+            @include sp {
+                width: 350px;
+                height: 70px;
+            }
+        }
+        &__user-name {
+            padding-top: 20px;
+        }
+        &__password {
+            @include sp {
+                margin-top: 20px;
+            }
+        }
+        &__check-user, &__check-pass {
+            display: flex;
+            text-align: left;
+            width: 560px;
+            margin: -15px auto 0 auto;
+            p {
+                margin: 18px 0 0 -60px;
+                @include sp {
+                    margin: 5px 0 0 -10px;
+                    font-size: 16px;
+                }
+            }
+            @include sp {
+                width: 350px;
+            }
+        }
+        &__check-user {
+            margin-top: 5px;
+        }
+        &__checkbox {
+            z-index: 10;
+        }
+        &__check {
+            position: relative;
+            left: -77px;
+            z-index: 0;
+            opacity: 0;
+            @include sp {
+                left: -21px;
+                top: 6px;
+                height: 15px;
+            }
+        }
+        &__login, &__send{
+            margin: 30px auto 0 auto;
+            width: 238px;
+            height: 110px;
+            @include sp {
+                margin-top: 50px;
+                height: 80px;
+            }
+            p {
+                position: relative;
+                font-size: 24px;
+                top: -65px;
+                left: -7px;
+                @include sp {
+                    font-size: 20px;
+                    top: -40px;
+                    left: 0;
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                transform: translate(2px,2px);
+            }
+        }
+        &__forget-pass {
+            width: 560px;
+            margin: -10px auto 0 auto;
+            padding-bottom: 150px;
+            text-align: left;
+            cursor: default;
+            @include sp {
+                padding-bottom: 50px;
+            }
+            a {
+                display: block;
+                width: 250px;
+            }
+            p {
+                width: 250px;
+                color: #ffffff;
+                @include sp {
+                    font-size: 16px;
+                }
+                &:hover {
+                    cursor: pointer;
+                    transform: translate(2px,2px);
+                }
+            }
+            @include sp {
+                width: 350px;
+            }
+        }
+        /* パスワード再設定 */
+        &__blame {
+            padding-top: 25px;
+            height: 150px;
+            p {
+                text-align: left;
+                width: 480px;
+                margin: -140px auto 0 auto;
+                @include sp {
+                    font-size: 16px;
+                    width: 330px;
+                    margin: -110px auto 0 auto;
+                }
+            }
+        }
+        &__mail {
+            margin-top: 50px;
+            @include sp {
+                margin-top: 20px;
+            }
+            p {
+                text-align: left;
+                margin: -50px 0 0 55px;
+                @include sp {
+                    margin: -35px 0 0 16px;
+                    font-size: 16px;
+                }
+            }
+        }
+        &__send {
+            margin-top: 50px;
+            padding-bottom: 200px;
+            @include sp {
+                padding-bottom: 100px;
+            }
+        }
+        /* 記事投稿 */
+        &__title, &__category, &__tag {
+            width: 1260px;
+            height: 100px;
+            text-align: left;
+            margin: 0 auto;
+            @include tab {
+                width: 620px;
+                height: 60px;
+            }
+            @include sp {
+                width: 350px;
+                height: 60px;
+            }
+            input {
+                position: relative;
+                top: -40px;
+                left: -530px;
+                @include tab {
+                    left: 33px;
+                    top: -69px;
+                }
+                @include sp {
+                    left: 13px;
+                    top: -47px;
+                }
+            }
+        }
+        &__title {
+            padding-top: 20px;
+        }
+        &__body {
+            width: 1260px;
+            height: 460px;
+            margin: 10px auto 0 auto;
+            @include tab {
+                width: 590px;
+                height: 380px;
+                margin: 55px auto 0 auto;
+            }
+            @include sp {
+                width: 350px;
+                height: 230px;
+                margin: 25px auto 0 auto;
+            }
+            img {
+                margin-top: -20px;
+                width: 1280px;
+                @include tab {
+                    width: 590px;
+                }
+                @include sp {
+                    width: 350px;
+                }
+            }
+            textarea {
+                position: relative;
+                top: -405px;
+                left: -5px;
+                color: #ffffff;
+                @include tab {
+                    left: 2px;
+                    top: -330px;
+                    width: 557px;
+                }
+                @include sp {
+                    left: 3px;
+                    top: -195px;
+                    font-size: 16px;
+                }
+            }
+        }
+        &__image {
+            width: 1260px;
+            height: 100px;
+            text-align: left;
+            margin: -40px auto 0 auto;
+            @include tab {
+                width: 620px;
+                height: 100px;
+            }
+            @include sp {
+                width: 350px;
+                height: 60px;
+                margin-top: -20px;
+            }
+            &__proc {
+                text-align: left;
+                cursor: pointer;
+                width: 240px;
+                height: 94px;
+                @include sp {
+                    height: 50px;
+                    width: 143px;
+                }
+                &__icon {
+                    position: relative;
+                    top: -70px;
+                    left: 35px;
+                    @include sp {
+                        left: 15px;
+                        top: -40px;
+                        height: 22px;
+                    }
+                }
+                p {
+                    position: relative;
+                    top: -100px;
+                    left: 90px;
+                    width: 100px;
+                    @include sp {
+                        font-size: 16px;
+                        left: 50px;
+                        top: -63px;
+                    }
+                }
+                &:hover {
+                    transform: translate(2px,2px);
+                }
+            }
+        }
+        &__select-image {
+            width: 1220px;
+            @include tab {
+                width: 590px;
+            }
+            @include sp {
+                width: 350px;
+            }
+            img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                max-width: 216px;
+                min-width: 216px;
+                grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
+                position: relative;
+                left: -12px;
+                @include tab {
+                    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+                    height: 100px;
+                    max-width: 110px;
+                    min-width: 110px;
+                    left: 0;
+                }
+                @include sp {
+                    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+                    height: 100px;
+                    max-width: 110px;
+                    min-width: 110px;
+                    left: 0;
+                }
+            }
+        }
+        &__category, &__tag {
+            margin-top: -10px;
+            @include tab {
+                height: 95px;
+            }
+            @include sp {
+                margin-top: 10px;
+            }
+        }
+        &__topic-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+            padding-bottom: 150px;
+            @include sp {
+                gap: 10px;
+                margin-top: 40px;
+                padding-bottom: 30px;
+            }
+            &__pre, &__post {
+                width: 238px;
+                height: 60px;
+                cursor: pointer;
+                @include sp {
+                    width: 160px;
+                }
+                &:hover {
+                    transform: translate(2px,2px);
+                }
+            }
+            p {
+                position: relative;
+                top: -63px;
+                left: -5px;
+                font-size: 24px;
+                @include sp {
+                    font-size: 20px;
+                    top: -40px;
+                    left: 3px;
+                }
+            }
+        }
+        /* 投稿一覧 */
+        &__list-title {
+            display: flex;
+            width: 1140px;
+            font-size: 25px;
+            margin: 0 auto 30px auto;
+            padding-top: 50px;
+            text-align: left;
+            @include tab {
+                width: 540px;
+                font-size: 20px;
+                padding-left: 30px;
+            }
+            @include sp {
+                width: 330px;
+                font-size: 14px;
+                padding-left: 30px;
+            }
+            &__category {
+                margin-left: 80px;
+                @include tab {
+                    margin-left: 10px;
+                }
+                @include sp {
+                    margin-left: 5px;
+                }
+            }
+            &__tag {
+                margin-left: 80px;
+                @include tab {
+                    margin-left: 5px;
+                }
+                @include sp {
+                    margin-left: 0;
+                    padding-left: 10px;
+                }
+            }
+            &__date {
+                margin-left: 130px;
+                @include tab {
+                    margin-left: 10px;
+                }
+                @include sp {
+                    margin-left: 5px;
+                }
+            }
+            &__text {
+                margin-left: 130px;
+                @include tab {
+                    margin-left: 10px;
+                }
+                @include sp {
+                    margin-left: 0;
+                    padding-left: 10px;
+                }
+            }
+            p {
+                @include tab {
+                    width: 100px;
+                }
+                @include sp {
+                    width: 70px;
+                }
+            }
+        }
+        &__list-frame {
+            padding-left: 40px;
+            height: 612px;
+            @include sp {
+                padding-left: 30px;
+            }
+        }
+        &__topic {
+            width: 1280px;
+            margin: -600px auto 0 auto;
+            @include tab {
+                width: 620px;
+                margin-top: -600px;
+            }
+            @include sp {
+                width: 350px;
+                margin-top: -600px;
+            }
+            &__detail {
+                display: flex;
+                height: 140px;
+                margin-bottom: 10px;
+                @include sp {
+                    font-size: 12px;
+                    height: 100px;
+                    margin-bottom: 20px;
+                }
+                &__checkbox {
+                    height: 45px;
+                    margin: -10px 0 0 -10px;
+                    z-index: 10;
+                    @include sp {
+                        height: 25px;
+                        margin: 0 0 0 0;
+                    }
+                }
+                &__check {
+                    height: 17px;
+                    position: relative;
+                    left: -63px;
+                    top: 3px;
+                    opacity: 0;
+                    z-index: 0;
+                    @include sp {
+                        left: -20px;
+                        height: 15px;
+                        top: 5px;
+                    }
+                }
+                &__title, &__category, &__tag, &__date {
+                    @include tab {
+                        width: 100px;
+                    }
+                    @include sp {
+                        width: 60px;
+                    }
+                    p {
+                        width: 170px;
+                        text-align: left;
+                        margin-right: 10px;
+                        @include tab {
+                            width: 80px;
+                        }
+                        @include sp {
+                            width: 55px;
+                        }
+                    }
+                }
+                &__title {
+                    margin-left: -15px;
+                    @include sp {
+                        margin-left: 5px;
+                    }
+                }
+                &__text {
+                    @include tab {
+                        margin-left: 15px;
+                    }
+                    p {
+                        width: 460px;
+                        height: 130px;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 10;
+                        overflow: hidden;
+                        @include tab {
+                            width: 100px;
+                            height: 130px;
+                        }
+                        @include sp {
+                            width: 55px;
+                            height: 95px;
+                        }
+                    }
+                }
+            }
+            p {
+                color: #ffffff;
+            }
+        }
+        &__list-button {
+            display: flex;
+            width: 1235px;
+            justify-content: center;
+            margin: 0 auto;
+            padding-bottom: 150px;
+            @include tab {
+                width: 620px;
+                padding: 20px 0 80px 0;
+            }
+            @include sp {
+                width: 350px;
+                padding: 20px 0 50px 0;
+            }
+            &__write, &__delete {
+                width: 200px;
+                height: 60px;
+                cursor: pointer;
+                &:hover {
+                    transform: translate(2px,2px);
+                }
+                p {
+                    width: 150px;
+                    position: relative;
+                    top: -97px;
+                    left: 60px;
+                    font-size: 24px;
+                    color: #ffffff;
+                }
+            }
+            &__write__icon, &__delete__icon {
+                position: relative;
+                top: -66px;
+                left: -50px;
+                @include sp {
+                    height: 18px;
+                    top: -39px;
+                    left: -52px;
+                }
+            }
+            &__write__icon {
+                @include sp {
+                    height: 18px;
+                    top: -17px;
+                    left: -140px;
+                }
+            }
+            &__write {
+                margin-left: 830px;
+                @include tab {
+                    margin-left: 170px;
+                }
+                @include sp {
+                    margin-left: 0;
+                }
+                p {
+                    @include sp {
+                        font-size: 20px;
+                        top: -40px;
+                        left: 30px;
+                    }
+
+                }
+            }
+            &__delete {
+                p {
+                    @include sp {
+                        font-size: 20px;
+                        top: -62px;
+                        left: 16px;
+                    }
+                }
+            }
+        }
+        input {
+            height: 2em;
+            color: #ffffff;
+            @include sp {
+                width: 330px;
+                font-size: 16px;
+                margin-top: 3px;
+            }
+        }
+        input::placeholder {
+            color: #ffffff;
+            font-size: 20px;
+            @include sp {
+                font-size: 16px;
+            }
+        }
+        textarea::placeholder {
+            color: #ffffff;
+            @include sp {
+                font-size: 16px;
+            }
+        }
+    }
+}
+.footer {
+    &__nav {
+        text-align: center;
+        margin: 180px 0 100px 0;
+        @include tab {
+            margin-top: 190px;
+        }
+        @include sp {
+            margin: 140px 0 50px 0;
+        }
+        li {
+            display: inline;
+            img {
+                height: 65px;
+                margin: 0 10px;
+                @include sp {
+                    height: 30px;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+    /* フッターナビ(記事詳細) */
+    &__article-nav {
+        text-align: center;
+        margin: 180px 0 100px 0;
+        @include tab {
+            margin-top: 80px;
+        }
+        @include sp {
+            margin: 50px 0 50px 0;
+        }
+        li {
+            display: inline;
+            img {
+                height: 65px;
+                margin: 0 10px;
+                @include sp {
+                    height: 30px;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+    /* フッターナビ(お店について) */
+    &__shopinfo-nav {
+        text-align: center;
+        margin: 280px 0 100px 0;
+        @include tab {
+            margin-top: 280px;
+        }
+        @include sp {
+            margin: 80px 0 50px 0;
+        }
+        li {
+            display: inline;
+            img {
+                height: 65px;
+                margin: 0 10px;
+                @include sp {
+                    height: 30px;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+    &__copy {
+        background: url(../img_true/footer_green.svg);
+        background-repeat: repeat;
+        height: 160px;
+        text-align: center;
+        @include sp {
+            height: 80px;
+        }
+        p {
+            font-size: 35px;
+            color: #fff;
+            padding-top: 60px;
+            @include sp {
+                font-size: 16px;
+                padding-top: 30px;
+            }
+        }
+    }
+}
+/* チャットbot */
+.chatbot {
+    position: fixed;
+    bottom: 12px;
+    left: -100%;
+    transition: .5s;
+    background: url(../img_true/chatbot_background.svg);
+    height: 300px;
+    width: 200px;
+    text-align: center;
+    display: none;
+    @include tab {
+        display: block;
+    }
+    @include sp {
+        display: block;
+    }
+    &__delete-btn {
+        position: relative;
+        top: 1px;
+        left: 43%;
+        span {
+            display: flex;
+            width: 20px;
+            height: 2px;
+            background-color: #ffffff;
+            position: relative;
+        }
+        span:nth-child(1){
+            top: 2px;
+            transform: rotate(45deg);
+        }
+        span:nth-child(2){
+            transform: rotate(-45deg);
+        }
+    }
+    &__content {
+        margin-top: 10px;
+        &__info {
+            p {
+                text-align: left;
+                font-size: 12px;
+                color: #5A5A5A;
+                margin: -38px 0 0 35px;
+            }
+        }
+        &__img {
+            margin-top: 17px;
+        }
+        &__question {
+            margin-top: 7px;
+            input {
+                text-align: left;
+                font-size: 12px;
+                position: relative;
+                top: -32px;
+                left: 35px;
+            }
+        }
+    }
+}
+.chatbot-in {
+    left: 5px;
+}
+.delete {
+    display: none;
+}
+.show {
+    display: grid;
+    margin: 0 auto 10px auto;
+    grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
+    @include tab {
+        grid-template-columns: repeat(auto-fill, minmax(116px, 1fr));
+        margin-bottom: 7px;
+    }
+    @include sp {
+        grid-template-columns: repeat(auto-fill, minmax(116px, 1fr));
+        margin-top: 5px;
+    }
+}

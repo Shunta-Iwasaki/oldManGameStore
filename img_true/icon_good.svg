@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="30" viewBox="0 0 32 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_300" data-name="長方形 300" width="32" height="30" transform="translate(-7966 -2945)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0.614"/>
+    </clipPath>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 500 428">
+      <image width="500" height="428" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAGsBAMAAADZJUgjAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAASUExURQAAAFEvOz0jLAAAAP///////5yLyRsAAAADdFJOUwAAAPp2xN4AAAABYktHRAX4b+nHAAAAB3RJTUUH5wYWATcyZLXn+gAAAjZJREFUeNrt0MtxAjEURcFxBkw5A2eAIQOcf0zeuXC9BYOYj3TpE4Ce+k5TaS5dWjqXZ07T4w49jo6Ojo6Ojo6Ojo6Ojt77cXR0dHR0dHR0dHR0dPTej6Ojo6Ojo49OX3Lrp6Vbeeb763GbHa9joKOjo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo/+nr3Sr7T+HHkdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHRz+afmjo6Ojo6OhxoaOjo6Ojx4WOjo6Ojh4XOjo6Ojp6XOjo6Ojo6HGho6Ojo6PHhY6Ojo6OHhc6Ojo6Onpc6Ojo6OjocaGjo6Ojo8eFjo6Ojo4eFzo6Ojo6elzo6Ojo6OhxoaOjo6Ojx4WOjo6Ojh4X+j19LiWMUaHn4kRHR0dHRx8qdHR0dHR0dHR0dPSxQkdHR0dHR0dHR0cfK3R0dPQ/em28MZZAT9OC0NHR0dHRewkdHR0dHR0dHR0dHR0dHR29o9DR0dHR0dHR0dHfm940xnVH6XZQdHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHT01cb43GyM8vBlTyg6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojr6s32sNMYC6Pz6b9HR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0TsKHR0dHR09jt42RgQUHR0dHR0dHR0dHR0dfbzQ0dHR0dHR0dHR0ccKHR0dHR0dfW/6L9zTy7Kyn0ghAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIzLTA2LTIyVDAxOjU1OjM3KzAwOjAw+mTy6wAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMy0wNi0yMlQwMTo1NTozNyswMDowMIs5SlcAAAAodEVYdGRhdGU6dGltZXN0YW1wADIwMjMtMDYtMjJUMDE6NTU6NTArMDA6MDDf5FyBAAAAAElFTkSuQmCC"/>
+    </pattern>
+  </defs>
+  <g id="icon_good" transform="translate(7966 2945)" clip-path="url(#clip-path)">
+    <rect id="KGE00wyDcld59YC1687398903_1687398950" width="30" height="26" transform="translate(-7964.999 -2943)" fill="url(#pattern)"/>
+  </g>
+</svg>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>おじいさんのゲームやさん</title>
+        <meta name='description' content="おじいさんのゲームやさんの公式ブログ。">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:url" content="https://shunta-iwasaki.github.io/FairyTale/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="おじいさんのゲームやさん" />
+        <meta property="og:description" content="おじいさんのゲームやさんの公式ブログ。" />
+        <meta property="og:site_name" content="おじいさんのゲームやさん" />
+        <meta property="og:image" content="https://shunta-iwasaki.github.io/fairytale/img/header.jpg" />
+        <link rel="icon" type="image/png" href="https://shunta-iwasaki.github.io/portfolio/img/logo_ita.png">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- ヘッダー -->
+        <header class="page-header">
+            <!-- ヘッダーアニメ(pc) -->
+            <video class="page-header__video-pc" src="img_true/header-anime_pc.mp4" loop autoplay muted>
+            </video>
+            <!-- ヘッダーアニメ(sp) -->
+            <video class="page-header__video-sp" src="img_true/header-anime_sp.mp4" loop autoplay muted>
+            </video>
+        </header>
+        <!-- コンテンツ部分 -->
+        <div class="user-content">
+            <div class="user-content__icon">
+                <img src="img_true/icon_topic.svg" alt="記事">
+                <p>記事投稿</p>
+            </div>            
+            <!-- 横線 -->
+            <p class="user__line">　</p>
+            <div class="user-content__action">
+                <div class="user-content__action__title">
+                    <img class="user-content__action__text" src="img_true/frame_pc_text.svg" alt="フレーム">
+                    <input id="title" type="text" value="" placeholder="タイトルを入力してください" size="46">
+                </div>
+                <div class="user-content__action__body">
+                    <img class="user-content__action__body" src="img_true/frame_pc_body.svg" alt="フレーム">
+                    <textarea id="body" value="" placeholder="本文を入力してください" wrap="hard" rows="15" cols="116"></textarea>
+                </div>
+                <div class="user-content__action__image">
+                    <div class="user-content__action__image__proc">
+                        <img class="user-content__action__image__proc__frame" src="img_true/frame_pc_add.svg" alt="フレーム">
+                        <img class="user-content__action__image__proc__icon" src="img_true/icon_camera.svg" alt="カメラ">
+                        <p>画像を挿入</p>
+                    </div>
+                </div>
+                <div class="user-content__action__select-image">
+                    <img class="delete" id="user-content__action__select-image__img1" src="" alt="none">
+                    <img class="delete" id="user-content__action__select-image__img2" src="" alt="none">
+                    <img class="delete" id="user-content__action__select-image__img3" src="" alt="none">
+                    <img class="delete" id="user-content__action__select-image__img4" src="" alt="none">
+                    <img class="delete" id="user-content__action__select-image__img5" src="" alt="none">
+                </div>
+                <div class="user-content__action__category">
+                    <img class="user-content__action__text" src="img_true/frame_pc_text.svg" alt="フレーム">
+                    <input id="category" type="text" value="" placeholder="カテゴリを入力してください" size="46">
+                </div>
+                <div class="user-content__action__tag">
+                    <img class="user-content__action__text" src="img_true/frame_pc_text.svg" alt="フレーム">
+                    <input id="tag" type="text" value="" placeholder="タグを入力してください" size="46">
+                </div>
+                <div class="user-content__action__topic-button">
+                    <div class="user-content__action__topic-button__pre">
+                        <img class="user-content__action__button" src="img_true/frame_pc_button.svg" alt="ボタン">
+                        <p>下書き保存</p>
+                    </div>
+                    <div class="user-content__action__topic-button__post">
+                        <img class="user-content__action__button" src="img_true/frame_pc_button.svg" alt="ボタン">
+                        <p>投稿する</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- フッター -->
+        <footer class="footer">
+            <!-- コピーライト -->
+            <div class="footer__copy">
+                <p>OJI GAME</p>
+            </div>
+        </footer>
+        <script src="js/script_edit.js"></script>
+    </body>
+</html>

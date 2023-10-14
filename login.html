@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>おじいさんのゲームやさん</title>
+        <meta name='description' content="おじいさんのゲームやさんの公式ブログ。">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:url" content="https://shunta-iwasaki.github.io/FairyTale/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="おじいさんのゲームやさん" />
+        <meta property="og:description" content="おじいさんのゲームやさんの公式ブログ。" />
+        <meta property="og:site_name" content="おじいさんのゲームやさん" />
+        <meta property="og:image" content="https://shunta-iwasaki.github.io/fairytale/img/header.jpg" />
+        <link rel="icon" type="image/png" href="https://shunta-iwasaki.github.io/portfolio/img/logo_ita.png">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- ヘッダー -->
+        <header class="page-header">
+            <!-- ヘッダーアニメ(pc) -->
+            <video class="page-header__video-pc" src="img_true/header-anime_pc.mp4" loop autoplay muted>
+            </video>
+            <!-- ヘッダーアニメ(sp) -->
+            <video class="page-header__video-sp" src="img_true/header-anime_sp.mp4" loop autoplay muted>
+            </video>
+        </header>
+        <!-- コンテンツ部分 -->
+        <div class="user-content">
+            <div class="user-content__icon">
+                <img src="img_true/icon_login.svg" alt="ドア">
+                <p>ログイン</p>
+            </div>            
+            <!-- 横線 -->
+            <p class="user__line">　</p>
+            <div class="user-content__action">
+                <div class="user-content__action__user-name">
+                    <img class="user-content__action__text" src="img_true/frame_pc_text.svg" alt="フレーム">
+                    <input type="text" placeholder="ユーザ名を入力してください" size="40">
+                </div>
+                <div class="user-content__action__check-user">
+                    <img class="user-content__action__checkbox" src="img_true/frame_pc_checkbox.svg" alt="チェックボックス">
+                    <img class="user-content__action__check" src="img_true/icon_check.svg" alt="チェック">
+                    <p>ユーザ名を保存する</p>
+                </div>
+                <div class="user-content__action__password">
+                    <img class="user-content__action__text" src="img_true/frame_pc_text.svg" alt="フレーム">
+                    <input type="password" placeholder="パスワードを入力してください" size="40">
+                </div>
+                <div class="user-content__action__check-pass">
+                    <img class="user-content__action__checkbox" src="img_true/frame_pc_checkbox.svg" alt="チェックボックス">
+                    <img class="user-content__action__check" src="img_true/icon_check.svg" alt="チェック">
+                    <p>パスワードを保存する</p>
+                </div>
+                <div class="user-content__action__login">
+                    <img class="user-content__action__button" src="img_true/frame_pc_button.svg" alt="ボタン">
+                    <p>ログイン</p>
+                </div>
+                <div class="user-content__action__forget-pass">
+                    <a href="password.html"><p>・パスワードを忘れた場合</p></a>
+                </div>
+            </div>
+        </div>
+        <!-- フッター -->
+        <footer class="footer">
+            <!-- コピーライト -->
+            <div class="footer__copy">
+                <p>OJI GAME</p>
+            </div>
+        </footer>
+        <script src="js/script_login.js"></script>
+    </body>
+</html>
