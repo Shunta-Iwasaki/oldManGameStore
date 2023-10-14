@@ -1,11 +1,7 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "PixelMplus10-Bold";
+  font-family: "PixelMplus10";
   src: url("font/PixelMplus10-Bold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "PixelMplus10-Regular";
-  src: url("font/PixelMplus10-Regular.woff2") format("woff2");
 }
 body {
   font-family: "PixelMplus10";
