@@ -3,6 +3,10 @@
   font-family: "PixelMplus10";
   src: url("../font/PixelMplus10-Regular.woff") format("woff"), url("../font/PixelMplus10-Regular.woff2") format("woff2");
 }
+#controller {
+  display: none;
+}
+
 body {
   font-family: "PixelMplus10";
 }
@@ -1193,11 +1197,13 @@ a {
 @media screen and (min-width: 640px) and (max-width: 1300px) {
   .main-content__shopinfo__body__shopinfo__text {
     text-align: center;
+    height: 263px;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 639px) {
   .main-content__shopinfo__body__shopinfo__text {
     text-align: center;
+    height: 142px;
   }
 }
 .main-content__shopinfo__body__shopinfo__text__image {
@@ -1353,6 +1359,7 @@ a {
 .main-content__shopinfo__body__assortment__text {
   color: #ffffff;
   line-height: 44px;
+  height: 446px;
 }
 @media screen and (min-width: 640px) and (max-width: 1300px) {
   .main-content__shopinfo__body__assortment__text {
@@ -1363,6 +1370,7 @@ a {
   .main-content__shopinfo__body__assortment__text {
     margin-top: 20px;
     line-height: 17px;
+    height: 200px;
   }
 }
 .main-content__shopinfo__body__assortment__text__title {
@@ -1457,6 +1465,7 @@ a {
 .main-content__shopinfo__body__experience__text {
   color: #ffffff;
   line-height: 44px;
+  height: 443px;
 }
 @media screen and (min-width: 640px) and (max-width: 1300px) {
   .main-content__shopinfo__body__experience__text {
@@ -1467,6 +1476,7 @@ a {
   .main-content__shopinfo__body__experience__text {
     margin-top: 20px;
     line-height: 17px;
+    height: 200px;
   }
 }
 .main-content__shopinfo__body__experience__text__title {
@@ -1584,6 +1594,7 @@ a {
 .main-content__shopinfo__body__purchase__text {
   color: #ffffff;
   line-height: 44px;
+  height: 450px;
 }
 @media screen and (min-width: 640px) and (max-width: 1300px) {
   .main-content__shopinfo__body__purchase__text {
@@ -1594,6 +1605,7 @@ a {
   .main-content__shopinfo__body__purchase__text {
     margin-top: 20px;
     line-height: 17px;
+    height: 200px;
   }
 }
 .main-content__shopinfo__body__purchase__text__title {
@@ -3852,4 +3864,27 @@ a {
     grid-template-columns: repeat(auto-fill, minmax(116px, 1fr));
     margin-top: 5px;
   }
+}
+
+.arrow img {
+  position: fixed;
+  height: 60px;
+  right: 12px;
+  bottom: 12px;
+  cursor: pointer; /* ホバーした時にポインタがどうなるか */
+}
+
+.arrow img:hover {
+  -webkit-transform: translate(2px, 2px);
+          transform: translate(2px, 2px);
+}
+
+.page-top {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.page-top.is-fadein {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

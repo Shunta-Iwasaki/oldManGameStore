@@ -4,6 +4,9 @@
     font-family: "PixelMplus10";
     src: url("../font/PixelMplus10-Regular.woff") format("woff"), url("../font/PixelMplus10-Regular.woff2") format("woff2");
 }
+#controller {
+    display: none;
+}
 body {
     font-family: "PixelMplus10";
 }
@@ -894,9 +897,11 @@ a {
                 &__text {
                     @include tab {
                         text-align: center;
+                        height: 263px;
                     }
                     @include sp {
                         text-align: center;
+                        height: 142px;
                     }
                     &__image {
                         margin-top: 20px;
@@ -1009,12 +1014,14 @@ a {
                 &__text {
                     color: #ffffff;
                     line-height: 44px;
+                    height: 446px;
                     @include tab {
                         margin-top: 20px;
                     }
                     @include sp {
                         margin-top: 20px;
                         line-height: 17px;
+                        height: 200px;
                     }
                     &__title {
                         margin: -470px 0 0 70px;
@@ -1085,12 +1092,14 @@ a {
                 &__text {
                     color: #ffffff;
                     line-height: 44px;
+                    height: 443px;
                     @include tab {
                         margin-top: 20px;
                     }
                     @include sp {
                         margin-top: 20px;
                         line-height: 17px;
+                        height: 200px;
                     }
                     &__title {
                         margin: -420px 0 0 70px;
@@ -1178,12 +1187,14 @@ a {
                 &__text {
                     color: #ffffff;
                     line-height: 44px;
+                    height: 450px;
                     @include tab {
                         margin-top: 20px;
                     }
                     @include sp {
                         margin-top: 20px;
                         line-height: 17px;
+                        height: 200px;
                     }
                     &__title {
                         margin: -470px 0 0 70px;
@@ -2936,4 +2947,21 @@ a {
         grid-template-columns: repeat(auto-fill, minmax(116px, 1fr));
         margin-top: 5px;
     }
+}
+.arrow img{ 
+    position:fixed;
+    height: 60px;
+    right:12px;
+    bottom:12px;
+    cursor:pointer;                             /* ホバーした時にポインタがどうなるか */
+}
+.arrow img:hover{ 
+    transform: translate(2px,2px);
+}
+.page-top {
+    opacity: 0;
+    transition:all 0.2s ease-in-out
+}
+.page-top.is-fadein {
+    opacity: 1;
 }
