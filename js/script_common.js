@@ -50,10 +50,9 @@ function mouseover(nav){
 // 文字点滅(共通)
 let flash = document.querySelectorAll(".flash");
 for (let i = 0; i < flash.length; i++) { 
-    function blink() {
+    setInterval(function blink() {
         flash[i].classList.toggle("hidden");
-    }
-    setInterval(blink, 800)
+    }, 800);
 }
 
 // ページトップ遷移
