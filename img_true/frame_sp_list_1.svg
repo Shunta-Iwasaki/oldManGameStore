@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="319" height="124" viewBox="0 0 319 124">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="275" height="125" viewBox="0 0 275 125">
   <defs>
     <clipPath id="clip-path">
-      <rect id="長方形_358" data-name="長方形 358" width="319" height="124" transform="translate(5255 2049)" fill="#fff" opacity="0.405"/>
+      <rect id="長方形_358" data-name="長方形 358" width="275" height="125" transform="translate(5255 2048)" fill="#fff" opacity="0.405"/>
     </clipPath>
     <clipPath id="clip-path-2">
       <rect id="長方形_1" data-name="長方形 1" width="73" height="97" fill="#fff" stroke="#707070" stroke-width="1"/>
@@ -22,30 +22,30 @@
     <pattern id="pattern-3" width="1" height="1" patternTransform="matrix(-1, 0, 0, 1, 328, 0)" viewBox="0 0 164 123">
       <use xlink:href="#image"/>
     </pattern>
-    <clipPath id="clip-path-8">
+    <clipPath id="clip-path-7">
       <rect id="長方形_21" data-name="長方形 21" width="73" height="87" transform="translate(0 0.264)" fill="#fff" stroke="#707070" stroke-width="1"/>
     </clipPath>
-    <pattern id="pattern-7" width="1" height="1" patternTransform="matrix(1, 0, 0, -1, 0, 246)" viewBox="0 0 164 123">
+    <pattern id="pattern-6" width="1" height="1" patternTransform="matrix(1, 0, 0, -1, 0, 246)" viewBox="0 0 164 123">
+      <use xlink:href="#image"/>
+    </pattern>
+    <clipPath id="clip-path-8">
+      <rect id="長方形_22" data-name="長方形 22" width="147" height="108" transform="translate(0 0.264)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <pattern id="pattern-7" width="1" height="1" patternTransform="translate(328 246) rotate(-180)" viewBox="0 0 164 123">
       <use xlink:href="#image"/>
     </pattern>
     <clipPath id="clip-path-9">
-      <rect id="長方形_22" data-name="長方形 22" width="147" height="108" transform="translate(0 0.264)" fill="#fff" stroke="#707070" stroke-width="1"/>
-    </clipPath>
-    <pattern id="pattern-8" width="1" height="1" patternTransform="translate(328 246) rotate(-180)" viewBox="0 0 164 123">
-      <use xlink:href="#image"/>
-    </pattern>
-    <clipPath id="clip-path-10">
       <rect id="長方形_23" data-name="長方形 23" width="82" height="58" transform="translate(0 0.264)" fill="#fff" stroke="#707070" stroke-width="1"/>
     </clipPath>
   </defs>
-  <g id="グループ_300" data-name="グループ 300" transform="translate(-5255 -2049)">
-    <line id="線_121" data-name="線 121" x2="314" transform="translate(5259.5 2170)" fill="none" stroke="#fff" stroke-width="2"/>
+  <g id="グループ_300" data-name="グループ 300" transform="translate(-5255 -2048)">
+    <line id="線_121" data-name="線 121" x2="267.383" transform="translate(5259.5 2170)" fill="none" stroke="#fff" stroke-width="2"/>
     <g id="マスクグループ_271" data-name="マスクグループ 271" clip-path="url(#clip-path)">
       <g id="グループ_299" data-name="グループ 299" transform="translate(4848 1442)">
         <g id="マスクグループ_1" data-name="マスクグループ 1" transform="translate(391 592)" clip-path="url(#clip-path-2)">
           <rect id="_23746687" data-name="23746687" width="165" height="124" transform="translate(13 11)" fill="url(#pattern)"/>
         </g>
-        <g id="マスクグループ_2" data-name="マスクグループ 2" transform="translate(610 592)" clip-path="url(#clip-path-3)">
+        <g id="マスクグループ_2" data-name="マスクグループ 2" transform="translate(566 592)" clip-path="url(#clip-path-3)">
           <rect id="_23746687-2" data-name="23746687" width="164" height="123" transform="translate(-45 11)" fill="url(#pattern-2)"/>
         </g>
         <g id="マスクグループ_3" data-name="マスクグループ 3" transform="translate(481 592)" clip-path="url(#clip-path-4)">
@@ -57,26 +57,23 @@
         <g id="マスクグループ_6" data-name="マスクグループ 6" transform="translate(531 592)" clip-path="url(#clip-path-4)">
           <rect id="_23746687-5" data-name="23746687" width="164" height="123" transform="translate(-46 11)" fill="url(#pattern-3)"/>
         </g>
-        <g id="マスクグループ_7" data-name="マスクグループ 7" transform="translate(577 592)" clip-path="url(#clip-path-4)">
-          <rect id="_23746687-6" data-name="23746687" width="164" height="123" transform="translate(-45 11)" fill="url(#pattern-3)"/>
+        <g id="マスクグループ_21" data-name="マスクグループ 21" transform="translate(391 659.736)" clip-path="url(#clip-path-7)">
+          <rect id="_23746687-6" data-name="23746687" width="164" height="123" transform="translate(13 -47.736)" fill="url(#pattern-6)"/>
         </g>
-        <g id="マスクグループ_21" data-name="マスクグループ 21" transform="translate(391 657.736)" clip-path="url(#clip-path-8)">
-          <rect id="_23746687-7" data-name="23746687" width="164" height="123" transform="translate(13 -47.736)" fill="url(#pattern-7)"/>
+        <g id="マスクグループ_22" data-name="マスクグループ 22" transform="translate(566 638.736)" clip-path="url(#clip-path-8)">
+          <rect id="_23746687-7" data-name="23746687" width="164" height="123" transform="translate(-45 -26.736)" fill="url(#pattern-7)"/>
         </g>
-        <g id="マスクグループ_22" data-name="マスクグループ 22" transform="translate(610 636.736)" clip-path="url(#clip-path-9)">
-          <rect id="_23746687-8" data-name="23746687" width="164" height="123" transform="translate(-45 -26.736)" fill="url(#pattern-8)"/>
+        <g id="マスクグループ_23" data-name="マスクグループ 23" transform="translate(481 688.736)" clip-path="url(#clip-path-9)">
+          <rect id="_23746687-8" data-name="23746687" width="164" height="123" transform="translate(-45 -76.736)" fill="url(#pattern-7)"/>
         </g>
-        <g id="マスクグループ_23" data-name="マスクグループ 23" transform="translate(481 686.736)" clip-path="url(#clip-path-10)">
-          <rect id="_23746687-9" data-name="23746687" width="164" height="123" transform="translate(-45 -76.736)" fill="url(#pattern-8)"/>
+        <g id="マスクグループ_24" data-name="マスクグループ 24" transform="translate(416 688.736)" clip-path="url(#clip-path-9)">
+          <rect id="_23746687-9" data-name="23746687" width="164" height="123" transform="translate(-45 -76.736)" fill="url(#pattern-7)"/>
         </g>
-        <g id="マスクグループ_24" data-name="マスクグループ 24" transform="translate(416 686.736)" clip-path="url(#clip-path-10)">
-          <rect id="_23746687-10" data-name="23746687" width="164" height="123" transform="translate(-45 -76.736)" fill="url(#pattern-8)"/>
+        <g id="マスクグループ_26" data-name="マスクグループ 26" transform="translate(531 688.736)" clip-path="url(#clip-path-9)">
+          <rect id="_23746687-10" data-name="23746687" width="164" height="123" transform="translate(-46 -76.736)" fill="url(#pattern-7)"/>
         </g>
-        <g id="マスクグループ_26" data-name="マスクグループ 26" transform="translate(531 686.736)" clip-path="url(#clip-path-10)">
-          <rect id="_23746687-11" data-name="23746687" width="164" height="123" transform="translate(-46 -76.736)" fill="url(#pattern-8)"/>
-        </g>
-        <g id="マスクグループ_27" data-name="マスクグループ 27" transform="translate(577 686.736)" clip-path="url(#clip-path-10)">
-          <rect id="_23746687-12" data-name="23746687" width="164" height="123" transform="translate(-45 -76.736)" fill="url(#pattern-8)"/>
+        <g id="マスクグループ_27" data-name="マスクグループ 27" transform="translate(555 688.736)" clip-path="url(#clip-path-9)">
+          <rect id="_23746687-11" data-name="23746687" width="164" height="123" transform="translate(-45 -76.736)" fill="url(#pattern-7)"/>
         </g>
       </g>
     </g>

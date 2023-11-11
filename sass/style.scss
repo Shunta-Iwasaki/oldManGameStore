@@ -27,7 +27,7 @@ a {
         height: 400px;
     }
     @include sp {
-        height: 220px;
+        height: 180px;
     }
 }
 /* ディゾルブ(画像一覧) */
@@ -37,9 +37,11 @@ a {
     width: 275px;
     @include tab {
         width: 193px;
+        height: 140px;
     }
     @include sp {
-        width: 150px;
+        width: 125px;
+        height: 100px;
     }
 }
 /* ディゾルブ(記事詳細) */
@@ -55,8 +57,8 @@ a {
         left: auto;
     }
     @include sp {
-        height: 240px;
-        width: 350px;
+        height: 190px;
+        width: 294px;
         left: auto;
     }
 }
@@ -243,6 +245,7 @@ a {
         right: 0;
         left: 0;
         margin: 0 auto;
+        width: 300px;
     }
 }
 [class$="page-transition"] {
@@ -287,13 +290,51 @@ a {
         margin-left: 210px;
     }
     @include sp {
-        margin-left: 70px;
+        margin-left: 45px;
     }
     a:nth-child(6) {
         margin: -10px 0 0 0;
         @include tab {
             margin-top: 2px;
         }
+    }
+}
+/* 記事詳細の画面遷移ボタン(なぜかこれだけずれるため対応) */
+.main-content__article__image-topic__page-transition-ex {
+
+    display: flex;
+    margin-top: 60px;
+    margin-left: 250px;
+    @include tab {
+        text-align: center;
+        margin-left: 180px;
+    }
+    @include sp {
+        text-align: center;
+        margin: 50px 0 0 30px;
+    }
+    img {
+        @include tab {
+            height: 35px;
+        }
+        @include sp {
+            height: 35px;
+        }
+    }
+    p {
+        margin-right: 30px;
+        font-size: 50px;
+        @include tab {
+            font-size: 30px;
+            margin-right: 20px;
+        }
+        @include sp {
+            font-size: 30px;
+            margin-right: 20px;
+        }
+    }
+    a:nth-child(1) {
+        text-decoration: underline;
     }
 }
 /* タイピング風文字出現 */
@@ -375,7 +416,7 @@ a {
             }
             @include sp {
                 display: flex;
-                width: 350px;
+                width: 294px;
             }
         }
         &__search-tab {
@@ -438,7 +479,7 @@ a {
             }
             @include sp {
                 display: block;
-                width: 350px;
+                width: 294px;
             }
         }
         /* 記事(メイン) */
@@ -455,6 +496,10 @@ a {
                 width: 300px;
             }
             &__part {
+                @include sp {
+                    width: 260px;
+                    margin: 0 auto;
+                }
                 &__title {
                     font-size: 30px;
                     margin: 10px 0;
@@ -497,7 +542,7 @@ a {
                         }
                         img {
                             @include sp {
-                                width: 100%;
+                                width: 260px;
                             }
                         }
                     }
@@ -588,7 +633,7 @@ a {
             }
             @include sp {
                 margin: 48px auto 0 auto;
-                width: 300px;
+                width: 260px;
             }
             &__topic {
                 display: grid;
@@ -601,7 +646,7 @@ a {
                 }
                 @include sp {
                     gap: 8px 10px;
-                    grid-template-columns: repeat(auto-fit, minmax(145px, 145px));
+                    grid-template-columns: repeat(auto-fit, minmax(124px, 124px));
                 }
                 &__part {
                     &__img {
@@ -613,7 +658,7 @@ a {
                             height: 130px;
                         }
                         @include sp {
-                            height: 98px;
+                            height: 85px;
                         }
                     }
                 }
@@ -630,7 +675,7 @@ a {
                 font-size: 25px;
             }
             @include sp {
-                width: 350px;
+                width: 294px;
                 margin: 0 auto;
                 font-size: 16px;
                 line-height: 18px;
@@ -642,7 +687,7 @@ a {
                 }
                 @include sp {
                     display: flex;
-                    margin: 0 auto;
+                    margin: 50px auto 0 auto;
                 }
                 &__img {
                     margin-left: -30px;
@@ -651,7 +696,7 @@ a {
                         margin: 0 auto;
                     }
                     @include sp {
-                        width: 98%;
+                        width: 95%;
                         margin: 0 auto;
                     }
                 }
@@ -669,8 +714,8 @@ a {
                 }
                 @include sp {
                     position: relative;
-                    top: -220px;
-                    left: 30px;
+                    top: -180px;
+                    left: 25px;
                     width: 100px;
                 }
                 p {
@@ -788,7 +833,7 @@ a {
                 }
                 &__status {
                     display: flex;
-                    margin: 50px 0 0 -5px;
+                    margin-top: 50px;
                     &__good {
                         display: flex;
                         margin-left: 30px;
@@ -796,8 +841,10 @@ a {
                             margin-left: 10px;
                         }
                         img {
+                            width: 32px;
                             @include sp {
-                                height: 50%;
+                                width: 17px;
+                                height: 15.5px;
                                 margin-top: 1px;
                             }
                         }
@@ -1417,7 +1464,7 @@ a {
             font-size: 25px;
         }
         @include sp {
-            width: 350px;
+            width: 294px;
             margin: 0 auto;
             font-size: 16px;
             line-height: 18px;
@@ -1428,6 +1475,9 @@ a {
         &__title {
             margin-top: 45px;
             font-size: 35px;
+            @include sp {
+                font-size: 24px;
+            }
         }
         &__list {
             &__topic {
@@ -1442,6 +1492,16 @@ a {
                     display: flex;
                     p {
                         margin-left: 10px;
+                        @include sp {
+                            margin-left: 4px;
+                        }
+                    }
+                    img {
+                        @include sp {
+                            height: 15px;
+                            margin-top: 2px;
+                        }
+
                     }
                 }
             }
@@ -1465,7 +1525,7 @@ a {
             margin-bottom: 50px;
         }
         @include sp {
-            width: 350px;
+            width: 294px;
             height: 500px;
             max-height: 500px;
             overflow-y: scroll;
@@ -1478,6 +1538,7 @@ a {
                 font-size: 30px;
             }
             @include sp {
+                margin-top: 20px;
                 font-size: 25px;
             }
         }
@@ -1496,6 +1557,9 @@ a {
             &__button {
                 display: flex;
                 margin-top: 15px;
+                @include sp {
+                    margin-top: 7px;
+                }
                 span {
                     width: 30px;
                     height: 4px;
@@ -1575,7 +1639,7 @@ a {
                 width: 650px;
             }
             @include sp {
-                width: 350px;
+                width: 294px;
                 font-size: 20px;
             }
             p {
@@ -1592,7 +1656,7 @@ a {
             font-size: 25px;
         }
         @include sp {
-            width: 350px;
+            width: 294px;
         }
         &__title {
             margin-top: 45px;
@@ -1775,7 +1839,7 @@ a {
             width: 650px;
         }
         @include sp {
-            width: 350px;
+            width: 294px;
         }
         &__title {
             margin-top: 45px;
@@ -1806,8 +1870,8 @@ a {
                     width: 310px;
                 }
                 @include sp {
-                    font-size: 26px;
-                    width: 350px;
+                    font-size: 22px;
+                    width: 294px;
                 }
                 &__month {
                     font-size: 38px;
@@ -1815,7 +1879,7 @@ a {
                         font-size: 29px;
                     }
                     @include sp {
-                        font-size: 31px;
+                        font-size: 28px;
                     }
                 }
                 &__week {
@@ -1839,7 +1903,7 @@ a {
                         margin-left: 65%;
                     }
                     @include sp {
-                        font-size: 22px;
+                        font-size: 18px;
                         margin-left: 65%;
                     }
                     &__square {
@@ -1851,8 +1915,8 @@ a {
                             height: 15px;
                         }
                         @include sp {
-                            width: 20px;
-                            height: 20px;
+                            width: 16px;
+                            height: 16px;
                         }
                     }
                     p {
@@ -2191,7 +2255,7 @@ a {
                 }
             }
             @include sp {
-                width: 350px;
+                width: 300px;
                 height: 70px;
             }
         }
@@ -2216,7 +2280,7 @@ a {
                 }
             }
             @include sp {
-                width: 350px;
+                width: 294px;
             }
         }
         &__check-user {
@@ -2249,6 +2313,7 @@ a {
                 font-size: 24px;
                 top: -65px;
                 left: -7px;
+                color: white;
                 @include sp {
                     font-size: 20px;
                     top: -40px;
@@ -2285,7 +2350,7 @@ a {
                 }
             }
             @include sp {
-                width: 350px;
+                width: 294px;
             }
         }
         /* パスワード再設定 */
@@ -2298,7 +2363,7 @@ a {
                 margin: -140px auto 0 auto;
                 @include sp {
                     font-size: 16px;
-                    width: 330px;
+                    width: 260px;
                     margin: -110px auto 0 auto;
                 }
             }
@@ -2335,7 +2400,7 @@ a {
                 height: 60px;
             }
             @include sp {
-                width: 350px;
+                width: 300px;
                 height: 60px;
             }
             input {
@@ -2347,8 +2412,8 @@ a {
                     top: -69px;
                 }
                 @include sp {
-                    left: 13px;
-                    top: -47px;
+                    left: 30px;
+                    top: -50px;
                 }
             }
         }
@@ -2365,7 +2430,7 @@ a {
                 margin: 55px auto 0 auto;
             }
             @include sp {
-                width: 350px;
+                width: 294px;
                 height: 230px;
                 margin: 25px auto 0 auto;
             }
@@ -2376,7 +2441,7 @@ a {
                     width: 590px;
                 }
                 @include sp {
-                    width: 350px;
+                    width: 294px;
                 }
             }
             textarea {
@@ -2390,9 +2455,10 @@ a {
                     width: 557px;
                 }
                 @include sp {
-                    left: 3px;
+                    left: 5px;
                     top: -195px;
                     font-size: 16px;
+                    width: 275px;
                 }
             }
         }
@@ -2406,7 +2472,7 @@ a {
                 height: 100px;
             }
             @include sp {
-                width: 350px;
+                width: 294px;
                 height: 60px;
                 margin-top: -20px;
             }
@@ -2451,7 +2517,7 @@ a {
                 width: 590px;
             }
             @include sp {
-                width: 350px;
+                width: 294px;
             }
             img {
                 width: 100%;
@@ -2493,7 +2559,7 @@ a {
             margin-top: 80px;
             padding-bottom: 150px;
             @include sp {
-                gap: 10px;
+                gap: 20px;
                 margin-top: 40px;
                 padding-bottom: 30px;
             }
@@ -2501,8 +2567,13 @@ a {
                 width: 238px;
                 height: 60px;
                 cursor: pointer;
+                img {
+                    @include sp {
+                        width: 135px;
+                    }
+                }
                 @include sp {
-                    width: 160px;
+                    width: 135px;
                 }
                 &:hover {
                     transform: translate(2px,2px);
@@ -2515,7 +2586,7 @@ a {
                 font-size: 24px;
                 @include sp {
                     font-size: 20px;
-                    top: -40px;
+                    top: -38px;
                     left: 3px;
                 }
             }
@@ -2534,8 +2605,8 @@ a {
                 padding-left: 30px;
             }
             @include sp {
-                width: 330px;
-                font-size: 14px;
+                width: 294px;
+                font-size: 12px;
                 padding-left: 30px;
             }
             &__category {
@@ -2573,7 +2644,7 @@ a {
                 }
                 @include sp {
                     margin-left: 0;
-                    padding-left: 10px;
+                    padding-left: 0;
                 }
             }
             p {
@@ -2589,7 +2660,7 @@ a {
             padding-left: 40px;
             height: 612px;
             @include sp {
-                padding-left: 30px;
+                padding-left: 25px;
             }
         }
         &__topic {
@@ -2600,7 +2671,7 @@ a {
                 margin-top: -600px;
             }
             @include sp {
-                width: 350px;
+                width: 300px;
                 margin-top: -600px;
             }
             &__detail {
@@ -2639,7 +2710,7 @@ a {
                         width: 100px;
                     }
                     @include sp {
-                        width: 60px;
+                        width: 51px;
                     }
                     p {
                         width: 170px;
@@ -2656,7 +2727,7 @@ a {
                 &__title {
                     margin-left: -15px;
                     @include sp {
-                        margin-left: 5px;
+                        margin-left: -3px;
                     }
                 }
                 &__text {
@@ -2696,13 +2767,17 @@ a {
                 padding: 20px 0 80px 0;
             }
             @include sp {
-                width: 350px;
+                width: 300px;
                 padding: 20px 0 50px 0;
+                display: block;
             }
             &__write, &__delete {
                 width: 200px;
                 height: 60px;
                 cursor: pointer;
+                @include sp {
+                    width: 150px;
+                }
                 &:hover {
                     transform: translate(2px,2px);
                 }
@@ -2728,8 +2803,8 @@ a {
             &__write__icon {
                 @include sp {
                     height: 18px;
-                    top: -17px;
-                    left: -140px;
+                    top: -37px;
+                    left: -41px;
                 }
             }
             &__write {
@@ -2738,13 +2813,13 @@ a {
                     margin-left: 170px;
                 }
                 @include sp {
-                    margin-left: 0;
+                    margin: 0 auto;
                 }
                 p {
                     @include sp {
                         font-size: 20px;
-                        top: -40px;
-                        left: 30px;
+                        top: -60px;
+                        left: 19px;
                     }
 
                 }
@@ -2759,13 +2834,22 @@ a {
                 }
             }
         }
+        &__text-edit {
+            height: 2em;
+            color: #ffffff;
+            @include sp {
+                width: 280px;
+                font-size: 16px;
+                margin-top: 3px;
+            }
+        }
         input {
             height: 2em;
             color: #ffffff;
             @include sp {
-                width: 330px;
+                width: 280px;
                 font-size: 16px;
-                margin-top: 3px;
+                margin: 6px 0 0 -15px;
             }
         }
         input::placeholder {
