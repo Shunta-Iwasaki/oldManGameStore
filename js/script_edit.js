@@ -87,3 +87,10 @@ button[0].addEventListener("click", async () => {
         selectImg[0].classList.add("show");
     } 
 })
+// 文字点滅(共通)
+let flash = document.querySelectorAll(".flash");
+for (let i = 0; i < flash.length; i++) { 
+    setInterval(function blink() {
+        flash[i].classList.toggle("hidden");
+    }, 800);
+}
